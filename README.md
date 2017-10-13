@@ -1,24 +1,9 @@
-# README
+# Pet Store & More!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run this:
+1.  Download
+2.  Create database in Mysql called "PetStore_development"
+3.  Make sure your database.yml file has the correct username and password
+4.  Bundle install
+5.  rake db:migrate
+6.  Start it up
