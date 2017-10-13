@@ -69,6 +69,6 @@ class InventoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inventory_params
-      params.fetch(:inventory, {})
+      params.require(:inventory).permit(:product_id, :product_type, :price, :store_id)
     end
 end
