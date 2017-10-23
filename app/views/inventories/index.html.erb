@@ -1,7 +1,7 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>Inventories</h1>
+<h1>Pets &amp; Inventory</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -20,9 +20,9 @@
         <td><%= inventory.product_type %></td>
         <td><%= inventory.price %></td>
         <td><%= inventory.store_id %></td>
-        <td><%= link_to 'Show', inventory %></td>
-        <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
-        <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', inventory, class: 'btn btn-primary', style: 'color: white' %></td>
+        <td><%= link_to 'Edit', edit_inventory_path(inventory), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +30,5 @@
 
 <br>
 
-<%= link_to 'New Inventory', new_inventory_path, class: 'btn btn-default' %>
+<%= link_to 'New Item', new_inventory_path, class: 'btn btn-default' %>
 </div>
