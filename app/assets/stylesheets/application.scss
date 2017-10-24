@@ -14,10 +14,7 @@
  *= require_self
  */
 @import 'bootstrap';
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Gabriela');
-=======
->>>>>>> origin/Adamo
 html, body {
   padding: 0;
   margin: 0;
@@ -37,7 +34,6 @@ html, body {
 // Main page styles
 .title {
   text-align: center;
-<<<<<<< HEAD
   display: inline-block;
   font-size: 72px;
   font-family: 'Gabriela', serif;
@@ -50,12 +46,7 @@ html, body {
 }
 .navbar-brand {
   font-family: 'Gabriela', serif;
-  line-height: 27roblpx;
-=======
-  font-size: 72px;
-  font-weight: 800;
-  color: #80ced6;
->>>>>>> origin/Adamo
+  line-height: 27px;
 }
 .jumbotron {
   background-image: url("pets.jpg");
@@ -64,7 +55,6 @@ html, body {
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
-<<<<<<< HEAD
   width: 100%;
   height: 700px;
   margin-bottom: 0;
@@ -82,12 +72,6 @@ html, body {
     border-color: rgba(0,0,0,0.5);
     color: black;
 }
-=======
-   width: 100%;
-   height: 700px;
-}
-
->>>>>>> origin/Adamo
 @media (max-width: 1023px) {
   .jumbotron {
     height: 200px;
