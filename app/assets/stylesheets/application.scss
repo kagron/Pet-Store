@@ -46,7 +46,7 @@ html, body {
 }
 .navbar-brand {
   font-family: 'Gabriela', serif;
-  line-height: 27px;
+  line-height: 27roblpx;
 }
 .jumbotron {
   background-image: url("pets.jpg");
@@ -60,7 +60,19 @@ html, body {
   margin-bottom: 0;
   padding-top: 0;
 }
-
+//Target the alert notice class and hide it
+.flash-container {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    margin-top: 50px;
+}
+.alert-notice, .alert-alert {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0,0,0,0.5);
+    color: black;
+}
 @media (max-width: 1023px) {
   .jumbotron {
     height: 200px;

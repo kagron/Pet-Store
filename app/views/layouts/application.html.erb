@@ -25,10 +25,18 @@
               <li><%= link_to "PETS", inventories_path %></li>
               <li><%= link_to "FOOD", inventories_path %></li>
               <li><%= link_to "TOYS", inventories_path %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
+              <% end %>
               </ul>
         </div>
       </div>
     </nav>
+    <div class="container flash-container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
