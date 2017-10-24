@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetStore</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" style="background-color: #618685">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Pet Store & More', root_path, class: 'navbar-brand' %>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "PETS", inventories_path %></li>
+              <li><%= link_to "FOOD", inventories_path %></li>
+              <li><%= link_to "TOYS", inventories_path %></li>
+              <li><%= link_to "EMPLOYEES", employees_path %></li>
+              </ul>
+        </div>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
