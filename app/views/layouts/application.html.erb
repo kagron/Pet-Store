@@ -22,8 +22,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="nav navbar-nav navbar-right">
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "PETS", inventories_path %></li>
-              <li><%= link_to "FOOD", inventories_path %></li>
+              <li><%= link_to "PETS", pets_path %></li>
+              <li><%= link_to "FOOD", foods_path %></li>
               <li><%= link_to "TOYS", inventories_path %></li>
               <% if user_signed_in? %>
                 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
