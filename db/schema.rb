@@ -31,7 +31,17 @@ ActiveRecord::Schema.define(version: 20171024173708) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
+  create_table "pets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "description"
+    t.decimal "price", precision: 10
+    t.string "breed"
+    t.date "dob"
+    t.string "typeOfAnimal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+  
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
