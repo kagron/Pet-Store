@@ -12,6 +12,18 @@
 
 ActiveRecord::Schema.define(version: 20171024175844) do
 
+  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "emp_no"
+    t.date "birth_date"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "gender"
+    t.date "hire_date"
+    t.string "titles"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
     t.string "expiration"
