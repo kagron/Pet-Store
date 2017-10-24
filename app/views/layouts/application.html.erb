@@ -26,6 +26,7 @@
               <li><%= link_to "FOOD", foods_path %></li>
               <li><%= link_to "TOYS", inventories_path %></li>
               <% if user_signed_in? %>
+                <li><%= link_to "EMPLOYEES", employees_path %></li>
                 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
               <% end %>
               </ul>
