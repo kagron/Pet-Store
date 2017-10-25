@@ -11,7 +11,8 @@ gem 'jquery-rails'
 gem 'devise'
 # bcrypt for devise
 #gem 'bcrypt', '~> 3.1.11'
-gem 'bcrypt', '3.1.11', platforms: [:ruby, :x64_mingw]
+#gem 'bcrypt', '3.1.10', platforms: [:ruby, :x64_mingw]
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
