@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024175844) do
+ActiveRecord::Schema.define(version: 20171025144559) do
 
-  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "emp_no"
     t.date "birth_date"
     t.string "first_name"
@@ -22,9 +22,11 @@ ActiveRecord::Schema.define(version: 20171024175844) do
     t.string "titles"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_employees_on_store_id"
   end
 
-  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "expiration"
     t.date "data"
@@ -35,7 +37,7 @@ ActiveRecord::Schema.define(version: 20171024175844) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "inventories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "inventories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "product_id"
     t.string "product_type"
     t.float "price", limit: 24
@@ -44,7 +46,7 @@ ActiveRecord::Schema.define(version: 20171024175844) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "pets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "description"
     t.decimal "price", precision: 10
@@ -53,9 +55,26 @@ ActiveRecord::Schema.define(version: 20171024175844) do
     t.string "typeOfAnimal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_pets_on_store_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "stores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "toys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "brand"
+    t.string "type"
+    t.integer "quantity"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -72,4 +91,6 @@ ActiveRecord::Schema.define(version: 20171024175844) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "employees", "stores"
+  add_foreign_key "pets", "stores"
 end

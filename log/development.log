@@ -2565,3 +2565,181 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (11.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateEmployees (20171023145004)
+  [1m[35m (124.1ms)[0m  [1m[35mCREATE TABLE `employees` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `emp_no` int, `birth_date` date, `first_name` varchar(255), `last_name` varchar(255), `gender` varchar(255), `hire_date` date, `titles` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171023145004')[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFoods (20171024173708)
+  [1m[35m (113.1ms)[0m  [1m[35mCREATE TABLE `foods` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `expiration` varchar(255), `data` date, `price` float, `foodType` varchar(255), `quantity` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171024173708')[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePets (20171024175844)
+  [1m[35m (141.1ms)[0m  [1m[35mCREATE TABLE `pets` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` varchar(255), `price` decimal, `breed` varchar(255), `dob` date, `typeOfAnimal` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171024175844')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-25 09:16:17 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (31398.6ms)
+Completed 200 OK in 33125ms (Views: 33006.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 09:18:25 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (12.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 1192ms (Views: 1047.4ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-25 09:18:28 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (11.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 1069ms (Views: 967.7ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-25 09:18:32 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1202ms (Views: 1108.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inventories" for 127.0.0.1 at 2017-10-25 09:18:35 -0500
+Processing by InventoriesController#index as HTML
+  Rendering inventories/index.html.erb within layouts/application
+  [1m[36mInventory Load (10.0ms)[0m  [1m[34mSELECT `inventories`.* FROM `inventories`[0m
+  Rendered inventories/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 1085ms (Views: 931.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 09:18:38 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1059ms (Views: 988.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 09:20:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 1087ms (Views: 1015.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateToys (20171025142425)
+  [1m[35m (102.1ms)[0m  [1m[35mCREATE TABLE `toys` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `brand` varchar(255), `type` varchar(255), `quantity` int, `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025142425')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStores (20171025142648)
+  [1m[35m (103.6ms)[0m  [1m[35mCREATE TABLE `stores` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `address` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025142648')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/toys" for 127.0.0.1 at 2017-10-25 09:28:04 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (11.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 23998ms (Views: 23862.6ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-10-25 09:30:09 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (10.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 1081ms (Views: 984.3ms | ActiveRecord: 12.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddEmployeeToStore (20171025144045)
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE `employee` ADD `store_id` bigint[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddEmployeeToStore (20171025144045)
+  [1m[35m (202.1ms)[0m  [1m[35mALTER TABLE `employees` ADD `store_id` bigint[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCREATE  INDEX `index_employees_on_store_id`  ON `employees` (`store_id`) [0m
+  [1m[35m (186.1ms)[0m  [1m[35mALTER TABLE `employees` ADD CONSTRAINT `fk_rails_b82b548cdd`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025144045')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddPetsToStore (20171025144559)
+  [1m[35m (146.1ms)[0m  [1m[35mALTER TABLE `pets` ADD `store_id` bigint[0m
+  [1m[35m (39.1ms)[0m  [1m[35mCREATE  INDEX `index_pets_on_store_id`  ON `pets` (`store_id`) [0m
+  [1m[35m (187.1ms)[0m  [1m[35mALTER TABLE `pets` ADD CONSTRAINT `fk_rails_26db0f5794`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025144559')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `stores` (`address`, `created_at`, `updated_at`) VALUES ('123 Washington Street, Chicago, IL', '2017-10-25 14:49:04', '2017-10-25 14:49:04')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `breed`, `dob`, `typeOfAnimal`, `created_at`, `updated_at`, `store_id`) VALUES ('Scrappy', 'hes cute', 1000, 'pitbull', 498, 'dog', '2017-10-25 14:50:33', '2017-10-25 14:50:33', 1)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `breed`, `dob`, `typeOfAnimal`, `created_at`, `updated_at`, `store_id`) VALUES ('Scrappy', 'hes cute', 1000, 'pitbull', 1989, 'dog', '2017-10-25 14:50:33', '2017-10-25 14:50:33', 1)[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `breed`, `typeOfAnimal`, `created_at`, `updated_at`, `store_id`) VALUES ('Scrappy', 'hes cute', 1000, 'pitbull', 'dog', '2017-10-25 14:50:33', '2017-10-25 14:50:33', 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m

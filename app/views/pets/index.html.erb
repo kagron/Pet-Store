@@ -10,7 +10,8 @@
       <th>Price</th>
       <th>Breed</th>
       <th>Dob</th>
-      <th>Typeofanimal</th>
+      <th>Type of animal</th>
+      <th>Store Id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
         <td><%= pet.breed %></td>
         <td><%= pet.dob %></td>
         <td><%= pet.typeOfAnimal %></td>
+        <td><%= pet.store_id %></td>
         <td><%= link_to 'Show', pet %></td>
         <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
         <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>

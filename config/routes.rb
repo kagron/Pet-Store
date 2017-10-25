@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stores
+  resources :toys
   resources :foods
   devise_for :users
   resources :inventories

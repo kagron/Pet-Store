@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @toy.brand %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @toy.type %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @toy.quantity %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @toy.description %>
+</p>
+
+<%= link_to 'Edit', edit_toy_path(@toy) %> |
+<%= link_to 'Back', toys_path %>

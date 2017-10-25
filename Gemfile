@@ -10,7 +10,8 @@ gem 'jquery-rails'
 # Use Devise for user authentication
 gem 'devise'
 # bcrypt for devise
-gem 'bcrypt', '~> 3.1.7'
+#gem 'bcrypt', '~> 3.1.11'
+gem 'bcrypt', '3.1.11', platforms: [:ruby, :x64_mingw]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
