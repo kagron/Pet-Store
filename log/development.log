@@ -3411,3 +3411,692 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 1065ms (Views: 984.1ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-25 13:15:42 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (346.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 797ms (Views: 765.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 13:16:01 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.5ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 316ms (Views: 233.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-10-25 13:16:07 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 311ms (Views: 261.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:16:14 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (2.5ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 286ms (Views: 260.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/pets/2/edit" for 127.0.0.1 at 2017-10-25 13:16:17 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (34.0ms)
+  Rendered pets/edit.html.erb within layouts/application (53.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 398ms (Views: 311.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/pets/2" for 127.0.0.1 at 2017-10-25 13:16:19 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"85sc0RM6xrrkUNfmmjDOeElsvKaYAlqHS5It2yn11mQSX0dmIWZwC2SGhzoppHs7T4Y/EB8wRVNmV7v2FuHPOQ==", "pet"=>{"name"=>"scooby", "description"=>"lkasd", "price"=>"0", "breed"=>"alsdkjf", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+Unpermitted parameter: :store_id
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-10-25 13:16:19 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 299ms (Views: 269.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:16:21 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 254ms (Views: 232.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/2/edit" for 127.0.0.1 at 2017-10-25 13:17:07 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/edit.html.erb within layouts/application (24.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 305ms (Views: 281.3ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/pets/2" for 127.0.0.1 at 2017-10-25 13:17:11 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k2vkIRKDBkp5Obc8qBSq9LjNGSU60ROyOyMokt3trBFyr7+WIN+w+/nv5+AbgB+3vieak73jDGYW5r6/4vm1TA==", "pet"=>{"name"=>"scooby", "description"=>"lkasd", "price"=>"90", "breed"=>"alsdkjf", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>""}, "commit"=>"Update Pet", "id"=>"2"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+Unpermitted parameter: :store_id
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE `pets` SET `price` = 90, `updated_at` = '2017-10-25 18:17:11' WHERE `pets`.`id` = 2[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 14ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-10-25 13:17:11 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 284ms (Views: 256.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:17:13 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 261ms (Views: 240.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/1/edit" for 127.0.0.1 at 2017-10-25 13:17:29 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.5ms)
+  Rendered pets/edit.html.erb within layouts/application (24.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 286ms (Views: 262.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/pets/1" for 127.0.0.1 at 2017-10-25 13:17:32 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JtP7LXS/oHaN9kXDg0Li6IVCso68cFUUE9MDipk1+k6SaoKVg95Fwfdcwly6qj9hGTUX0pY/4gQ9UMR5VyBMQ==", "pet"=>{"name"=>"Scrappy", "description"=>"hes cute", "price"=>"1000", "breed"=>"pitbull", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: :store_id
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `pets` SET `dob` = '2017-10-25', `updated_at` = '2017-10-25 18:17:32' WHERE `pets`.`id` = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/1
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2017-10-25 13:17:32 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 295ms (Views: 272.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:17:34 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 257ms (Views: 235.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/2/edit" for 127.0.0.1 at 2017-10-25 13:17:45 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+Started GET "/pets/2/edit" for 127.0.0.1 at 2017-10-25 13:17:45 -0500
+Processing by PetsController#edit as HTML
+  Rendering pets/edit.html.erb within layouts/application
+  Parameters: {"id"=>"2"}
+  Rendered pets/_form.html.erb (3.5ms)
+  Rendered pets/edit.html.erb within layouts/application (24.6ms)
+  [1m[35m (6.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPet Load (31.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (3.5ms)
+  Rendered pets/edit.html.erb within layouts/application (28.2ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 612ms (Views: 579.3ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 486ms (Views: 406.1ms | ActiveRecord: 38.0ms)
+
+
+Started PATCH "/pets/2" for 127.0.0.1 at 2017-10-25 13:17:47 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkx6BzOFMN7ULMLtMb6q5ZG5GpyQwpymG+kLaz4I1KJ3iCGwAdmGb1T6kjGCKh+ml1OZKhfwg3I2LJ1GARzN/w==", "pet"=>{"name"=>"scooby", "description"=>"lkasd", "price"=>"90", "breed"=>"alsdkjf", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+Unpermitted parameter: :store_id
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-10-25 13:17:47 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 267ms (Views: 243.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:18:18 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 257ms (Views: 238.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/1/edit" for 127.0.0.1 at 2017-10-25 13:18:28 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/edit.html.erb within layouts/application (23.8ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 301ms (Views: 278.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/pets/1" for 127.0.0.1 at 2017-10-25 13:18:33 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BwEd/JbJ54Iz6JffmyZULHoDAdKggDmMiE3SBmcXtrPB0/gadRRgFO4CPcHnwfdaXHLfR9ApB1DI990ZqC/gaw==", "pet"=>{"name"=>"Scrappy", "description"=>"hes cute", "price"=>"1000", "breed"=>"pitbull", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"1"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: :store_id
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/1
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2017-10-25 13:18:33 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 264ms (Views: 242.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:18:38 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 285ms (Views: 261.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/2/edit" for 127.0.0.1 at 2017-10-25 13:19:14 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (3.5ms)
+  Rendered pets/edit.html.erb within layouts/application (23.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 294ms (Views: 269.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/pets/2" for 127.0.0.1 at 2017-10-25 13:19:16 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+5Pg2xGo6r6/29iodleGzBwTqQM6j93kJAvfq7b39YKKhQ0XhoVG3opP74STetYNprNEovYIKO9VblTkc/Giw==", "pet"=>{"name"=>"scooby", "description"=>"lkasd", "price"=>"90", "breed"=>"alsdkjf", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"2"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+Unpermitted parameter: :store_id
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-10-25 13:19:16 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 274ms (Views: 252.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:20:09 -0500
+Processing by PetsController#index as HTML
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:20:09 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (34.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (73.0ms)
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (21.5ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (40.0ms)
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 563ms (Views: 503.8ms | ActiveRecord: 40.5ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 444ms (Views: 403.0ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/pets/new" for 127.0.0.1 at 2017-10-25 13:20:10 -0500
+Processing by PetsController#new as HTML
+  Rendering pets/new.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/new.html.erb within layouts/application (23.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 306ms (Views: 279.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pets" for 127.0.0.1 at 2017-10-25 13:20:22 -0500
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gu/ytvEKPtQ+3qCsYEspTlf+N/AslyQE/R2qq9juo006Mtkz89Q8LxGX43Hzz3/dfA8xb3pU3y6eHptJ6vNBfA==", "pet"=>{"name"=>"doggo", "description"=>"kldja", "price"=>"10", "breed"=>"sldkfj", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Create Pet"}
+Unpermitted parameter: :store_id
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `breed`, `dob`, `typeOfAnimal`, `created_at`, `updated_at`) VALUES ('doggo', 'kldja', 10, 'sldkfj', '2017-10-25', 'dog', '2017-10-25 18:20:22', '2017-10-25 18:20:22')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/3
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2017-10-25 13:20:22 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 276ms (Views: 251.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:20:24 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 257ms (Views: 235.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 13:20:41 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 277ms (Views: 251.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:21:26 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 291ms (Views: 266.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/2/edit" for 127.0.0.1 at 2017-10-25 13:21:27 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (3.5ms)
+  Rendered pets/edit.html.erb within layouts/application (24.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 292ms (Views: 268.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/pets/2" for 127.0.0.1 at 2017-10-25 13:21:29 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GE0MBT3px9p8HT+RMObliON4LVE5mo7n6KuDBXQWNUP5iVeyD7Vxa/zLb02DclDL5ZKu576okTPFbhUoSwIsHg==", "pet"=>{"name"=>"scooby", "description"=>"lkasd", "price"=>"90", "breed"=>"alsdkjf", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"2"}, "commit"=>"Update Pet", "id"=>"2"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[33mUPDATE `pets` SET `store_id` = 2, `updated_at` = '2017-10-25 18:21:29' WHERE `pets`.`id` = 2[0m
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.5ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`petstore_development`.`pets`, CONSTRAINT `fk_rails_26db0f5794` FOREIGN KEY (`store_id`) REFERENCES `stores` (`id`)): UPDATE `pets` SET `store_id` = 2, `updated_at` = '2017-10-25 18:21:29' WHERE `pets`.`id` = 2):
+  
+app/controllers/pets_controller.rb:44:in `block in update'
+app/controllers/pets_controller.rb:43:in `update'
+Started PATCH "/pets/2" for 127.0.0.1 at 2017-10-25 13:21:43 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GE0MBT3px9p8HT+RMObliON4LVE5mo7n6KuDBXQWNUP5iVeyD7Vxa/zLb02DclDL5ZKu576okTPFbhUoSwIsHg==", "pet"=>{"name"=>"scooby", "description"=>"lkasd", "price"=>"90", "breed"=>"alsdkjf", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"2"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `pets` SET `store_id` = 1, `updated_at` = '2017-10-25 18:21:43' WHERE `pets`.`id` = 2[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-10-25 13:21:43 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 265ms (Views: 242.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:21:45 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 270ms (Views: 246.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets/3/edit" for 127.0.0.1 at 2017-10-25 13:21:47 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/edit.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 295ms (Views: 272.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/pets/3" for 127.0.0.1 at 2017-10-25 13:21:49 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQgt96j7D+EQP9o7YMjiQkJmEuzIFVLQ8ndOHWSHOrMr4C/ZWINteN9NgdaW4AqXxAS+SksmD1Ok7fQHwWnmaQ==", "pet"=>{"name"=>"doggo", "description"=>"kldja", "price"=>"10", "breed"=>"sldkfj", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `pets` SET `store_id` = 1, `updated_at` = '2017-10-25 18:21:49' WHERE `pets`.`id` = 3[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/3
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2017-10-25 13:21:49 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 304ms (Views: 279.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:21:51 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 290ms (Views: 267.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/3/edit" for 127.0.0.1 at 2017-10-25 13:21:53 -0500
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/edit.html.erb within layouts/application (24.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 288ms (Views: 262.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/pets/3" for 127.0.0.1 at 2017-10-25 13:21:55 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXlwzx/2pkr8dfldSpJqFPhyHSxK0So2gGFWNmzB4EArkXLh747E0zMHorC8uoLBfhCxisnid7XW++wsyS88mg==", "pet"=>{"name"=>"doggo", "description"=>"kldja", "price"=>"10", "breed"=>"sldkfj", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"2"}, "commit"=>"Update Pet", "id"=>"3"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE `pets` SET `store_id` = 2, `updated_at` = '2017-10-25 18:21:55' WHERE `pets`.`id` = 3[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`petstore_development`.`pets`, CONSTRAINT `fk_rails_26db0f5794` FOREIGN KEY (`store_id`) REFERENCES `stores` (`id`)): UPDATE `pets` SET `store_id` = 2, `updated_at` = '2017-10-25 18:21:55' WHERE `pets`.`id` = 3):
+  
+app/controllers/pets_controller.rb:44:in `block in update'
+app/controllers/pets_controller.rb:43:in `update'
+Started PATCH "/pets/3" for 127.0.0.1 at 2017-10-25 13:22:08 -0500
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXlwzx/2pkr8dfldSpJqFPhyHSxK0So2gGFWNmzB4EArkXLh747E0zMHorC8uoLBfhCxisnid7XW++wsyS88mg==", "pet"=>{"name"=>"doggo", "description"=>"kldja", "price"=>"10", "breed"=>"sldkfj", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"25", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"3"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/3
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2017-10-25 13:22:08 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 285ms (Views: 261.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-25 13:22:10 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 299ms (Views: 277.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 13:31:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 274ms (Views: 254.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 19:04:45 -0500
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4149.5ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 8214ms (Views: 7998.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-25 19:05:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1222ms (Views: 1141.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 19:05:50 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (13.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (26.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1356ms (Views: 1121.7ms | ActiveRecord: 16.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `pets` (`created_at`, `updated_at`) VALUES ('2017-10-26 00:12:35', '2017-10-26 00:12:35')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-10-25 19:13:09 -0500
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1287.3ms)
+Completed 500 Internal Server Error in 4357ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pets_path' for #<#<Class:0x456e700>:0x455e170>
+Did you mean?  asset_path):
+    22:       <div class="collapse navbar-collapse" id="navbarNav">
+    23:         <div class="nav navbar-nav navbar-right">
+    24:             <ul class="nav navbar-nav navbar-right">
+    25:               <li><%= link_to "PETS", pets_path %></li>
+    26:               <li><%= link_to "FOOD", foods_path %></li>
+    27:               <li><%= link_to "TOYS", inventories_path %></li>
+    28:               <% if user_signed_in? %>
+  
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__469884688_36049044'
+Started GET "/" for 127.0.0.1 at 2017-10-25 19:15:20 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1525.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 4348ms (ActiveRecord: 6.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employees_path' for #<#<Class:0x4622eb0>:0x460d0d0>):
+    26:               <li><%= link_to "FOOD", '#' %></li>
+    27:               <li><%= link_to "TOYS", '#' %></li>
+    28:               <% if user_signed_in? %>
+    29:                 <li><%= link_to "EMPLOYEES", employees_path %></li>
+    30:                 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
+    31:               <% end %>
+    32:               </ul>
+  
+app/views/layouts/application.html.erb:29:in `_app_views_layouts_application_html_erb___1055982038_36336756'
+Started GET "/" for 127.0.0.1 at 2017-10-25 19:16:20 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1197ms (Views: 1106.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-10-25 19:17:33 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1425ms (Views: 1226.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/1/pets" for 127.0.0.1 at 2017-10-25 19:17:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/1/pets"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/stores/1/pets" for 127.0.0.1 at 2017-10-25 19:18:23 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"store_id"=>"1"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 94ms (ActiveRecord: 5.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pet with 'id'=):
+  
+app/controllers/pets_controller.rb:67:in `set_pet'
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` LIMIT 11[0m
+Started GET "/stores/1/pets/new" for 127.0.0.1 at 2017-10-25 19:23:49 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PetsController#new as HTML
+  Parameters: {"store_id"=>"1"}
+  Rendering pets/new.html.erb within layouts/application
+  Rendered pets/_form.html.erb (587.1ms)
+  Rendered pets/new.html.erb within layouts/application (831.2ms)
+Completed 500 Internal Server Error in 1371ms (ActiveRecord: 16.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `pets_path' for #<#<Class:0x3fe4108>:0x3fd4b98>
+Did you mean?  asset_path):
+    1: <%= form_with(model: pet, local: true) do |form| %>
+    2:   <% if pet.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+  
+app/views/pets/_form.html.erb:1:in `_app_views_pets__form_html_erb___619091697_32027724'
+app/views/pets/new.html.erb:3:in `_app_views_pets_new_html_erb__888864248_33499692'
+Started GET "/stores/1/pets" for 127.0.0.1 at 2017-10-25 19:25:51 -0500
+Processing by PetsController#show as HTML
+  Parameters: {"store_id"=>"1"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pet with 'id'=):
+  
+app/controllers/pets_controller.rb:67:in `set_pet'
