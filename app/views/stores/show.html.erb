@@ -2,7 +2,9 @@
 
 <p>
   <strong>Address:</strong>
-  <%= @store.address %>
+  <%= @store.street_line_1 %><br />
+  <%= @store.street_line_2 %><br />
+  <%= @store.city %> <%= @store.state %>, <%= @store.zip_code %>
 </p>
 
 <%= link_to 'Edit', edit_store_path(@store) %> |

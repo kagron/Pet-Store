@@ -29,6 +29,8 @@
                 <li><%= link_to "EMPLOYEES", employees_path %></li>
                 <li><%= link_to "STORES", stores_path %></li>
                 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "LOG IN", new_user_session_path %></li>
               <% end %>
               </ul>
         </div>

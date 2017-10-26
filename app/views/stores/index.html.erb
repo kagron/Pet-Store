@@ -16,7 +16,9 @@
   <tbody>
     <% @stores.each do |store| %>
       <tr>
-        <td><%= store.address %></td>
+        <td><%= store.street_line_1 %>
+        <%= store.street_line_2 %>
+        <%= store.city %> <%= store.state %>, <%= store.zip_code %></td>
         <td><%= link_to 'Show', store, class: 'btn btn-primary', style: 'color: white' %></td>
         <td><%= link_to 'Edit', edit_store_path(store), class: 'btn btn-warning', style: 'color: white' %></td>
         <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>

@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'pry-rails', :group => :development
+
+gem 'rails-erd', require: false, group: :development
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Use Devise for user authentication
@@ -52,6 +56,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
