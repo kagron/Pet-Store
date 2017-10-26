@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :birth_date %>
-    <%= form.text_field :birth_date, id: :employee_birth_date %>
+    <%= form.date_select :birth_date, id: :employee_birth_date %>
   </div>
 
   <div class="field">
@@ -38,12 +38,16 @@
 
   <div class="field">
     <%= form.label :hire_date %>
-    <%= form.text_field :hire_date, id: :employee_hire_date %>
+    <%= form.date_select :hire_date, id: :employee_hire_date %>
   </div>
 
   <div class="field">
     <%= form.label :titles %>
     <%= form.text_field :titles, id: :employee_titles %>
+  </div>
+  <div class="field">
+    <%= form.label :store_id %>
+    <%= form.text_field :store_id, id: :pet_store_id %>
   </div>
 
   <div class="actions">

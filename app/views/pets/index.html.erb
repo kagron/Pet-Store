@@ -26,9 +26,9 @@
         <td><%= pet.dob %></td>
         <td><%= pet.typeOfAnimal %></td>
         <td><%= pet.store_id %></td>
-        <td><%= link_to 'Show', pet %></td>
-        <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
-        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %></td>
+        <td><%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %></td>
+        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,5 +36,5 @@
 
 <br>
 
-<%= link_to 'New Pet', new_pet_path %>
+<%= link_to 'New Pet', new_pet_path, class: 'btn btn-default'%>
 </div>

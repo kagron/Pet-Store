@@ -1,14 +1,16 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Toys</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Brand</th>
       <th>Type</th>
       <th>Quantity</th>
       <th>Description</th>
+      <th>Store</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,12 +19,13 @@
     <% @toys.each do |toy| %>
       <tr>
         <td><%= toy.brand %></td>
-        <td><%= toy.type %></td>
+        <td><%= toy.toyType %></td>
         <td><%= toy.quantity %></td>
         <td><%= toy.description %></td>
-        <td><%= link_to 'Show', toy %></td>
-        <td><%= link_to 'Edit', edit_toy_path(toy) %></td>
-        <td><%= link_to 'Destroy', toy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= toy.store_id %></td>
+        <td><%= link_to 'Show', toy, class: 'btn btn-primary', style: 'color: white' %></td>
+        <td><%= link_to 'Edit', edit_toy_path(toy), class: 'btn btn-warning', style: 'color: white' %></td>
+        <td><%= link_to 'Destroy', toy, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +33,5 @@
 
 <br>
 
-<%= link_to 'New Toy', new_toy_path %>
+<%= link_to 'New Toy', new_toy_path, class: 'btn btn-default' %>
+</div>

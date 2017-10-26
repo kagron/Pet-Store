@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :expiration %>
-    <%= form.text_field :expiration, id: :food_expiration %>
+    <%= form.date_select :expirationDate, id: :food_expiration %>
   </div>
 
   <div class="field">
@@ -39,6 +39,10 @@
   <div class="field">
     <%= form.label :quantity %>
     <%= form.text_field :quantity, id: :food_quantity %>
+  </div>
+  <div class="field">
+    <%= form.label :store_id %>
+    <%= form.number_field :store_id, id: :store_id %>
   </div>
 
   <div class="actions">

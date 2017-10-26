@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025144559) do
+ActiveRecord::Schema.define(version: 20171026162057) do
 
   create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "emp_no"
@@ -28,13 +28,15 @@ ActiveRecord::Schema.define(version: 20171025144559) do
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.string "expiration"
     t.date "data"
     t.float "price", limit: 24
     t.string "foodType"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.date "expirationDate"
+    t.index ["store_id"], name: "index_foods_on_store_id"
   end
 
   create_table "inventories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -67,11 +69,13 @@ ActiveRecord::Schema.define(version: 20171025144559) do
 
   create_table "toys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "brand"
-    t.string "type"
     t.integer "quantity"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.string "toyType"
+    t.index ["store_id"], name: "index_toys_on_store_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -92,5 +96,7 @@ ActiveRecord::Schema.define(version: 20171025144559) do
   end
 
   add_foreign_key "employees", "stores"
+  add_foreign_key "foods", "stores"
   add_foreign_key "pets", "stores"
+  add_foreign_key "toys", "stores"
 end

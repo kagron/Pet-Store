@@ -3411,3 +3411,1015 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 1065ms (Views: 984.1ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-25 19:29:45 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1321.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3167ms (Views: 3034.9ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 19:30:36 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (11.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1135ms (Views: 1019.5ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/inventories" for 127.0.0.1 at 2017-10-25 19:30:39 -0500
+Processing by InventoriesController#index as HTML
+  Rendering inventories/index.html.erb within layouts/application
+  [1m[36mInventory Load (14.0ms)[0m  [1m[34mSELECT `inventories`.* FROM `inventories`[0m
+  Rendered inventories/index.html.erb within layouts/application (25.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1218ms (Views: 1040.5ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 19:30:43 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1260ms (Views: 1174.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-10-25 19:30:45 -0500
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (287.3ms)
+  Rendered employees/new.html.erb within layouts/application (532.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1798ms (Views: 1635.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-10-25 19:31:00 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zviDfQbkrxu6ggLDFAacjtuvzHgpz+hUmtAghouwvPtka/6ge+XkiuG7RKDBVhSg9TUXzlwT++hfW269wkjI2A==", "employee"=>{"emp_no"=>"1234", "birth_date"=>"", "first_name"=>"Kyle", "last_name"=>"Grondin", "gender"=>"Male", "hire_date"=>"", "titles"=>"CEO"}, "commit"=>"Create Employee"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (13.0ms)
+  Rendered employees/new.html.erb within layouts/application (94.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1271ms (Views: 1120.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 19:32:01 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1137ms (Views: 1036.5ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2017-10-25 19:32:12 -0500
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (15.0ms)
+  Rendered employees/new.html.erb within layouts/application (115.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1394ms (Views: 1270.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2017-10-25 19:32:26 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wcxJu1dG0RpjRwre2asRsxNyN4yUIACifxDCZelZ/35rXzRmKkeaizh+TL0M+5mdPejsOuH8Ex66m4xeoKGLXQ==", "employee"=>{"emp_no"=>"123", "birth_date"=>"", "first_name"=>"Kyle", "last_name"=>"Grondin", "gender"=>"M", "hire_date"=>"", "titles"=>"CEO", "store_id"=>"1"}, "commit"=>"Create Employee"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `employees` (`emp_no`, `first_name`, `last_name`, `gender`, `titles`, `created_at`, `updated_at`, `store_id`) VALUES (123, 'Kyle', 'Grondin', 'M', 'CEO', '2017-10-26 00:32:26', '2017-10-26 00:32:26', 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 151ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2017-10-25 19:32:26 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1177ms (Views: 1000.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 19:32:30 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1677ms (Views: 1561.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-25 19:33:02 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1056ms (Views: 979.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-25 19:33:39 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (13.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (26.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1363ms (Views: 1168.8ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-25 19:33:42 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (12.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (23.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1270ms (Views: 1107.3ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/toys/new" for 127.0.0.1 at 2017-10-25 19:33:52 -0500
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  Rendered toys/_form.html.erb (45.8ms)
+  Rendered toys/new.html.erb within layouts/application (246.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1481ms (Views: 1377.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/toys" for 127.0.0.1 at 2017-10-25 19:33:55 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TRZMDTcJJYGrqmMiGB93/ywBb7pe6becRmxjH1EHjkxnlziRWrJHIeoWr1BCJdtGfSUCNxebBEU2CYlCZPWS1A==", "toy"=>{"brand"=>"", "type"=>"", "quantity"=>"", "description"=>""}, "commit"=>"Create Toy"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `toys` (`brand`, `type`, `description`, `created_at`, `updated_at`) VALUES ('', '', '', '2017-10-26 00:33:55', '2017-10-26 00:33:55')[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/toys/1
+Completed 302 Found in 30ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/toys/1" for 127.0.0.1 at 2017-10-25 19:33:55 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (0.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  Rendering toys/show.html.erb within layouts/application
+  Rendered toys/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1189ms (Views: 1056.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 10:17:26 -0500
+  [1m[35m (5.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3623.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 7792ms (Views: 7638.1ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-26 10:18:31 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (14.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (67.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1402ms (Views: 1202.6ms | ActiveRecord: 18.0ms)
+
+
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddFoodsToStore (20171026151934)
+  [1m[35m (179.7ms)[0m  [1m[35mALTER TABLE `foods` ADD `store_id` bigint[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE  INDEX `index_foods_on_store_id`  ON `foods` (`store_id`) [0m
+  [1m[35m (198.2ms)[0m  [1m[35mALTER TABLE `foods` ADD CONSTRAINT `fk_rails_a68752f748`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026151934')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddToysToStore (20171026151957)
+  [1m[35m (221.2ms)[0m  [1m[35mALTER TABLE `toys` ADD `store_id` bigint[0m
+  [1m[35m (46.1ms)[0m  [1m[35mCREATE  INDEX `index_toys_on_store_id`  ON `toys` (`store_id`) [0m
+  [1m[35m (346.8ms)[0m  [1m[35mALTER TABLE `toys` ADD CONSTRAINT `fk_rails_73c2521fcf`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026151957')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 10:26:28 -0500
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (15.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (32.1ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3353ms (Views: 3184.1ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2017-10-26 10:27:24 -0500
+Processing by FoodsController#new as HTML
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/_form.html.erb (2273.1ms)
+  Rendered foods/new.html.erb within layouts/application (2352.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3531ms (Views: 3413.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2017-10-26 10:27:51 -0500
+Processing by FoodsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SY8l+GMZxn1K3zJJ0BmK1RuFVh5yEEY6+GSfPsVIxBoWlgDPwO2D8weTI13OSMQA3aH/62ZriE8HueNQey3kg==", "food"=>{"name"=>"Treats", "expiration"=>"", "data(1i)"=>"2017", "data(2i)"=>"10", "data(3i)"=>"26", "price"=>"10.0", "foodType"=>"Dog treats", "quantity"=>"150", "store_id"=>"1"}, "commit"=>"Create Food"}
+Unpermitted parameter: :store_id
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `foods` (`name`, `expiration`, `data`, `price`, `foodType`, `quantity`, `created_at`, `updated_at`) VALUES ('Treats', '', '2017-10-26', 10.0, 'Dog treats', 150, '2017-10-26 15:27:52', '2017-10-26 15:27:52')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/foods/1
+Completed 302 Found in 39ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/foods/1" for 127.0.0.1 at 2017-10-26 10:27:52 -0500
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  Rendering foods/show.html.erb within layouts/application
+  Rendered foods/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1267ms (Views: 1103.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 10:27:56 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1338ms (Views: 1256.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 10:28:17 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1115ms (Views: 1031.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/foods/1/edit" for 127.0.0.1 at 2017-10-26 10:28:43 -0500
+Processing by FoodsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  Rendering foods/edit.html.erb within layouts/application
+  Rendered foods/_form.html.erb (16.5ms)
+  Rendered foods/edit.html.erb within layouts/application (107.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1423ms (Views: 1281.9ms | ActiveRecord: 9.5ms)
+
+
+Started PATCH "/foods/1" for 127.0.0.1 at 2017-10-26 10:28:47 -0500
+Processing by FoodsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i/aBXdLcbLFEqa+s16iF5ENc5q6AqWEKS7yDs9UmPfVpoSFvMQXnWVwsngMuIv6wrUCDm4B53U5vg4aa1dtM/Q==", "food"=>{"name"=>"Treats", "expiration"=>"", "data(1i)"=>"2017", "data(2i)"=>"10", "data(3i)"=>"26", "price"=>"10.0", "foodType"=>"Dog treats", "quantity"=>"150", "store_id"=>"1"}, "commit"=>"Update Food", "id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE `foods` SET `store_id` = 1, `updated_at` = '2017-10-26 15:28:47' WHERE `foods`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/foods/1
+Completed 302 Found in 36ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/foods/1" for 127.0.0.1 at 2017-10-26 10:28:47 -0500
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  Rendering foods/show.html.erb within layouts/application
+  Rendered foods/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1086ms (Views: 997.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 10:28:51 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1207ms (Views: 1122.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:32:37 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (15.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (61.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1357ms (Views: 1222.2ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:33:09 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1145ms (Views: 1055.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toys/1/edit" for 127.0.0.1 at 2017-10-26 10:33:24 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/_form.html.erb (43.0ms)
+  Rendered toys/edit.html.erb within layouts/application (122.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1332ms (Views: 1254.9ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/toys/1" for 127.0.0.1 at 2017-10-26 10:34:08 -0500
+Processing by ToysController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DrMBQLuE6BJQpQBJRpquSfGGxlwCSj4BqtocH8DqlDrsi75ShWpuMiuJ8aTaExFWZxHtL62DPW7rrUba9dAk0g==", "toy"=>{"brand"=>"Kong", "type"=>"Chew Toy", "quantity"=>"1", "description"=>"Chew toy for dog", "store_id"=>"1"}, "commit"=>"Update Toy", "id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE `toys` SET `brand` = 'Kong', `type` = 'Chew Toy', `quantity` = 1, `description` = 'Chew toy for dog', `store_id` = 1, `updated_at` = '2017-10-26 15:34:09' WHERE `toys`.`id` = 1[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/toys/1
+Completed 302 Found in 336ms (ActiveRecord: 24.0ms)
+
+
+Started GET "/toys/1" for 127.0.0.1 at 2017-10-26 10:34:09 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
+  
+app/controllers/toys_controller.rb:67:in `set_toy'
+Started PATCH "/toys/1" for 127.0.0.1 at 2017-10-26 10:35:29 -0500
+Processing by ToysController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DrMBQLuE6BJQpQBJRpquSfGGxlwCSj4BqtocH8DqlDrsi75ShWpuMiuJ8aTaExFWZxHtL62DPW7rrUba9dAk0g==", "toy"=>{"brand"=>"Kong", "type"=>"", "quantity"=>"1", "description"=>"Chew toy for dog", "store_id"=>"1"}, "commit"=>"Update Toy", "id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
+  
+app/controllers/toys_controller.rb:67:in `set_toy'
+Started GET "/toys/1/edit" for 127.0.0.1 at 2017-10-26 10:35:51 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (0.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
+  
+app/controllers/toys_controller.rb:67:in `set_toy'
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mFood Load (12.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` LIMIT 11[0m
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM `pets` WHERE `pets`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:37:48 -0500
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (12.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (116.6ms)
+Completed 500 Internal Server Error in 597ms (ActiveRecord: 14.0ms)
+
+
+  
+ActionView::Template::Error (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
+    16:   </thead>
+    17: 
+    18:   <tbody>
+    19:     <% @toys.each do |toy| %>
+    20:       <tr>
+    21:         <td><%= toy.brand %></td>
+    22:         <td><%= toy.type %></td>
+  
+app/views/toys/index.html.erb:19:in `_app_views_toys_index_html_erb__544793275_36066804'
+Started GET "/" for 127.0.0.1 at 2017-10-26 10:38:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1356.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3101ms (Views: 3015.5ms | ActiveRecord: 9.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mToy Load (10.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` LIMIT 11[0m
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` LIMIT 11[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangeColumnInToys (20171026154325)
+  [1m[35m (224.5ms)[0m  [1m[35mALTER TABLE `toys` DROP `type`[0m
+  [1m[35m (182.7ms)[0m  [1m[35mALTER TABLE `toys` ADD `toyType` varchar(255)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026154325')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:46:57 -0500
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (12.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (64.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3229ms (Views: 3075.5ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/toys/1/edit" for 127.0.0.1 at 2017-10-26 10:47:49 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/_form.html.erb (93.6ms)
+  Rendered toys/edit.html.erb within layouts/application (195.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1520ms (Views: 1410.1ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/toys/1" for 127.0.0.1 at 2017-10-26 10:47:56 -0500
+Processing by ToysController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RNy91SLG6l4NomZKUOePZBgeW489B4+gX8wpIEFotT+m5ALHHChsfnaOl6fMbjB7jolw/JLOjM8eu3PldFIF1w==", "toy"=>{"brand"=>"Kong", "toyType"=>"chew toy", "quantity"=>"1", "description"=>"Chew toy for dog", "store_id"=>"1"}, "commit"=>"Update Toy", "id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: :toyType
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/toys/1
+Completed 302 Found in 188ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/toys/1" for 127.0.0.1 at 2017-10-26 10:47:57 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  Rendering toys/show.html.erb within layouts/application
+  Rendered toys/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1151ms (Views: 1063.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toys/1/edit" for 127.0.0.1 at 2017-10-26 10:48:39 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (2.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/_form.html.erb (10.0ms)
+  Rendered toys/edit.html.erb within layouts/application (100.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1401ms (Views: 1251.2ms | ActiveRecord: 12.0ms)
+
+
+Started PATCH "/toys/1" for 127.0.0.1 at 2017-10-26 10:48:44 -0500
+Processing by ToysController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6lDhAxx8qyIPNDfpY+7BMMrbs4K7C4x4oO7ddh+Ay4cIaF4RIpItAnQYxgT/Z34vXEyY8RTCjxfhmYezKrp7bw==", "toy"=>{"brand"=>"Kong", "toyType"=>"Chew Toy", "quantity"=>"1", "description"=>"Chew toy for dog", "store_id"=>"1"}, "commit"=>"Update Toy", "id"=>"1"}
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (0.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE `toys` SET `toyType` = 'Chew Toy', `updated_at` = '2017-10-26 15:48:45' WHERE `toys`.`id` = 1[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/toys/1
+Completed 302 Found in 117ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/toys/1" for 127.0.0.1 at 2017-10-26 10:48:45 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToy Load (1.5ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` WHERE `toys`.`id` = 1 LIMIT 1[0m
+  Rendering toys/show.html.erb within layouts/application
+  Rendered toys/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1182ms (Views: 1093.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:48:49 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1339ms (Views: 1257.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:49:19 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (2.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1090ms (Views: 1013.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:50:21 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (2.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1129ms (Views: 1051.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:52:48 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (12.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1091ms (Views: 1016.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:53:05 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (2.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1107ms (Views: 1028.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-26 10:54:49 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (14.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (64.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1265ms (Views: 1156.6ms | ActiveRecord: 19.0ms)
+
+
+Started DELETE "/pets/4" for 127.0.0.1 at 2017-10-26 10:54:55 -0500
+Processing by PetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QsU15IgQd6zCTjtz3eH5jGQ6DtsDEzd0KllL0nryPRqqEgMktzM8svp79ai8hhF8v5V5mXGDjWteWbawt4O4bg==", "id"=>"4"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 4 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM `pets` WHERE `pets`.`id` = 4[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets
+Completed 302 Found in 33ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-26 10:54:55 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1237ms (Views: 1136.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 10:54:59 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (1.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1263ms (Views: 1190.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 10:55:02 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (15.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (61.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1249ms (Views: 1134.4ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-26 10:55:06 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (2.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1265ms (Views: 1186.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-26 10:55:07 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (60.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1328ms (Views: 1202.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-26 10:57:41 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (68.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3239ms (Views: 3097.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/employees/1/edit" for 127.0.0.1 at 2017-10-26 10:59:15 -0500
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/_form.html.erb (102.1ms)
+  Rendered employees/edit.html.erb within layouts/application (184.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1361ms (Views: 1248.0ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/employees/1" for 127.0.0.1 at 2017-10-26 10:59:21 -0500
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/XhhiYg6EblcqvDvLzJNz9tzvQnciaMuCSLEJnrgFS+pOoxJWiixeM09W78BMySPTprPRpsCO/YYR58TYV5OxQ==", "employee"=>{"emp_no"=>"123", "birth_date(1i)"=>"2017", "birth_date(2i)"=>"10", "birth_date(3i)"=>"26", "first_name"=>"Kyle", "last_name"=>"Grondin", "gender"=>"M", "hire_date(1i)"=>"2017", "hire_date(2i)"=>"10", "hire_date(3i)"=>"26", "titles"=>"CEO", "store_id"=>"1"}, "commit"=>"Update Employee", "id"=>"1"}
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[33mUPDATE `employees` SET `birth_date` = '2017-10-26', `hire_date` = '2017-10-26', `updated_at` = '2017-10-26 15:59:21' WHERE `employees`.`id` = 1[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 158ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2017-10-26 10:59:21 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1272ms (Views: 1116.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-26 11:04:43 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1211ms (Views: 1118.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-26 11:08:57 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (50.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1179ms (Views: 1090.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-26 11:10:12 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2460ms (Views: 2368.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-26 11:10:15 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1121ms (Views: 1047.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 11:10:20 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (12.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (48.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1209ms (Views: 1094.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 11:10:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1185ms (Views: 1103.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 11:15:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1076ms (Views: 998.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-10-26 11:15:31 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (1.5ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1166ms (Views: 1034.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-10-26 11:17:04 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1198ms (Views: 1097.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-10-26 11:17:51 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1065ms (Views: 992.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 11:17:56 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (12.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (58.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1331ms (Views: 1216.2ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-10-26 11:18:02 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (2.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1153ms (Views: 1057.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-10-26 11:18:04 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1195ms (Views: 1100.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-10-26 11:18:07 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1274ms (Views: 1176.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 11:18:52 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1272ms (Views: 1184.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/foods/1/edit" for 127.0.0.1 at 2017-10-26 11:19:14 -0500
+Processing by FoodsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  Rendering foods/edit.html.erb within layouts/application
+  Rendered foods/_form.html.erb (103.0ms)
+  Rendered foods/edit.html.erb within layouts/application (177.9ms)
+Completed 500 Internal Server Error in 572ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "":String):
+    18: 
+    19:   <div class="field">
+    20:     <%= form.label :expiration %>
+    21:     <%= form.date_select :expiration, id: :food_expiration %>
+    22:   </div>
+    23: 
+    24:   <div class="field">
+  
+app/views/foods/_form.html.erb:21:in `block in _app_views_foods__form_html_erb__22775972_84619560'
+app/views/foods/_form.html.erb:1:in `_app_views_foods__form_html_erb__22775972_84619560'
+app/views/foods/edit.html.erb:3:in `_app_views_foods_edit_html_erb___922124878_84921504'
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangeFoodsTable (20171026162057)
+  [1m[35m (240.3ms)[0m  [1m[35mALTER TABLE `foods` DROP `expiration`[0m
+  [1m[35m (208.4ms)[0m  [1m[35mALTER TABLE `foods` ADD `expirationDate` date[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026162057')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 11:22:49 -0500
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (11.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (197.0ms)
+Completed 500 Internal Server Error in 714ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `expiration' for #<Food:0x3b3be00>
+Did you mean?  expirationDate):
+    19:     <% @foods.each do |food| %>
+    20:       <tr>
+    21:         <td><%= food.name %></td>
+    22:         <td><%= food.expiration %></td>
+    23:         <td><%= food.data %></td>
+    24:         <td><%= food.price %></td>
+    25:         <td><%= food.foodType %></td>
+  
+app/views/foods/index.html.erb:22:in `block in _app_views_foods_index_html_erb__573773447_35741616'
+app/views/foods/index.html.erb:19:in `_app_views_foods_index_html_erb__573773447_35741616'
+Started GET "/foods" for 127.0.0.1 at 2017-10-26 11:23:42 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (51.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3108ms (Views: 3003.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/foods/1/edit" for 127.0.0.1 at 2017-10-26 11:24:57 -0500
+Processing by FoodsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  Rendering foods/edit.html.erb within layouts/application
+  Rendered foods/_form.html.erb (98.1ms)
+  Rendered foods/edit.html.erb within layouts/application (181.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1340ms (Views: 1245.6ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/foods/1" for 127.0.0.1 at 2017-10-26 11:25:01 -0500
+Processing by FoodsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acnIv3n9ejJmpoIL+k/F4RO+6okwukHMy913CiMH6VKLnmiNmiTx2n4js6QDxb61/aKPvDBq/Yjv4nIjI/qYWg==", "food"=>{"name"=>"Treats", "expirationDate(1i)"=>"2017", "expirationDate(2i)"=>"10", "expirationDate(3i)"=>"26", "data(1i)"=>"2017", "data(2i)"=>"10", "data(3i)"=>"26", "price"=>"10.0", "foodType"=>"Dog treats", "quantity"=>"150", "store_id"=>"1"}, "commit"=>"Update Food", "id"=>"1"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE `foods` SET `expirationDate` = '2017-10-26', `updated_at` = '2017-10-26 16:25:02' WHERE `foods`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/foods/1
+Completed 302 Found in 180ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/foods/1" for 127.0.0.1 at 2017-10-26 11:25:02 -0500
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` WHERE `foods`.`id` = 1 LIMIT 1[0m
+  Rendering foods/show.html.erb within layouts/application
+  Rendered foods/show.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1523ms (Views: 1423.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 11:57:10 -0500
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1400.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3124ms (Views: 2999.8ms | ActiveRecord: 19.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-10-26 11:58:02 -0500
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-10-26 11:58:02 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6zq1UbDIWg/xb6R42BBMLxm05BZOCuzSdWW/41GQJb4D7YORj+sREclaaqO5d6TfwhuTVDyaVs0BZUKBnOGgyg=="}
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6zq1UbDIWg/xb6R42BBMLxm05BZOCuzSdWW/41GQJb4D7YORj+sREclaaqO5d6TfwhuTVDyaVs0BZUKBnOGgyg=="}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (15.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms (ActiveRecord: 5.4ms)
+
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 11:58:03 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 1131ms (Views: 1051.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-10-26 11:58:10 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (398.4ms)
+Completed 200 OK in 1802ms (Views: 1779.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-10-26 11:58:14 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5nbQ6w6VAOqXVlW+LFDBqBsUgOAhxcdjV6QI++NM+m5t28ptWdtS0I4rNrHCb0el4qOMh3uiXEqRK/a3ycsCA==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-10-26 16:58:15', `last_sign_in_at` = '2017-10-25 15:27:04', `sign_in_count` = 6, `updated_at` = '2017-10-26 16:58:15' WHERE `users`.`id` = 1[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1381ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 11:58:16 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1050ms (Views: 974.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-10-26 11:58:41 -0500
+Processing by Devise::SessionsController#destroy as HTML
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-10-26 11:58:41 -0500
+  Parameters: {"authenticity_token"=>"XCjNUw4HSjYoIMvM4rlnBqeXVv1TMpZ7rY0Mo6OHMRoF+KRwIetJKc1TvFT9cOY+yxyqGdn5bJI5hc/GQbd5Mg=="}
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XCjNUw4HSjYoIMvM4rlnBqeXVv1TMpZ7rY0Mo6OHMRoF+KRwIetJKc1TvFT9cOY+yxyqGdn5bJI5hc/GQbd5Mg=="}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 55ms (ActiveRecord: 9.7ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 53ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-26 11:58:41 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1079ms (Views: 1004.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-10-26 11:58:56 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (96.1ms)
+Completed 200 OK in 1231ms (Views: 1227.9ms | ActiveRecord: 0.0ms)
+
+

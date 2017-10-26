@@ -1,8 +1,11 @@
+<div class="container">
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Stores</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Address</th>
@@ -14,9 +17,9 @@
     <% @stores.each do |store| %>
       <tr>
         <td><%= store.address %></td>
-        <td><%= link_to 'Show', store %></td>
-        <td><%= link_to 'Edit', edit_store_path(store) %></td>
-        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', store, class: 'btn btn-primary', style: 'color: white' %></td>
+        <td><%= link_to 'Edit', edit_store_path(store), class: 'btn btn-warning', style: 'color: white' %></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +27,5 @@
 
 <br>
 
-<%= link_to 'New Store', new_store_path %>
+<%= link_to 'New Store', new_store_path, class: 'btn btn-default' %>
+</div>

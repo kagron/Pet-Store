@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type, id: :toy_type %>
+    <%= form.label :toyType %>
+    <%= form.text_field :toyType, id: :toy_type %>
   </div>
 
   <div class="field">
@@ -29,6 +29,11 @@
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, id: :toy_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :store_id %>
+    <%= form.number_field :store_id, id: :store_id %>
   </div>
 
   <div class="actions">
