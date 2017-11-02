@@ -4947,3 +4947,137 @@ Completed 200 OK in 1140ms (Views: 1065.7ms | ActiveRecord: 2.0ms)
 
   [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[36mToy Load (11.5ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+Started GET "/" for 127.0.0.1 at 2017-11-01 09:55:33 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1202.7ms)
+Completed 200 OK in 2600ms (Views: 2572.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-01 09:55:54 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (316.5ms)
+Completed 200 OK in 711ms (Views: 651.8ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-01 09:55:57 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iK+ziJUMfcLSJ0qj+qnf3XZZI5TfOOvoK5UEYRLO+zVr/HihXoLJFtWgJNRPzlCtADyk2vWcykqMOXPoDWNubg==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-01 14:55:57', `last_sign_in_at` = '2017-10-26 19:48:44', `sign_in_count` = 8, `updated_at` = '2017-11-01 14:55:57' WHERE `users`.`id` = 1[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 321ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-01 09:55:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 258ms (Views: 238.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-11-01 09:56:01 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (10.2ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (36.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 391ms (Views: 280.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-01 09:56:02 -0500
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (8.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (22.8ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 301ms (Views: 247.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 10:35:21 -0500
+  [1m[35m (15.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1664.9ms)
+Completed 200 OK in 3402ms (Views: 3380.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-02 10:35:39 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (310.5ms)
+Completed 200 OK in 628ms (Views: 592.1ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-02 10:35:42 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5egXHx7TBBtgZtuLoj2k8cRzIw/6HVtXQzKR39FjAVqBVvVEW23HMe4V/fJbKX54KywWCKJCy248bPJSxtUyyw==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-02 15:35:42', `last_sign_in_at` = '2017-11-01 14:55:57', `sign_in_count` = 9, `updated_at` = '2017-11-02 15:35:42' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 320ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 10:35:42 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 227ms (Views: 201.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-11-02 10:35:44 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (15.6ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (31.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 332ms (Views: 217.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-11-02 10:35:45 -0500
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 270ms (Views: 225.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-11-02 10:36:00 -0500
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (21.9ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (21.9ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 285ms (Views: 199.0ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-02 10:36:02 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 247ms (Views: 220.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-11-02 10:36:47 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (15.6ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 228ms (Views: 196.5ms | ActiveRecord: 15.6ms)
+
+
