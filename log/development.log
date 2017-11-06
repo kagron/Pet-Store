@@ -1,6 +1,6 @@
 Started GET "/" for 127.0.0.1 at 2017-10-13 17:05:24 -0500
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -8,7 +8,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
 activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
@@ -348,7 +348,7 @@ Processing by InventoriesController#index as HTML
 Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x0056445fa3d690>:0x007f3c512b14e0>):
     14:       <div class="collapse navbar-collapse" id="navbarNav">
     15:         <div class="nav navbar-nav navbar-right">
@@ -357,7 +357,7 @@ ActionView::Template::Error (undefined local variable or method `posts_path' for
     18:               <li><%= link_to "PROJECTS", '#' %></li>
     19:               <li><%= link_to "CONTACT", new_contact_path %></li>
     20:               </ul>
-  
+
 app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__3602184628082588344_69948518229580'
 Started GET "/inventories" for 127.0.0.1 at 2017-10-16 09:26:38 -0500
 Processing by InventoriesController#index as HTML
@@ -771,9 +771,9 @@ Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
 Started GET "/inventoresi" for 127.0.0.1 at 2017-10-18 10:45:45 -0500
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  
+
 ActionController::RoutingError (No route matches [GET] "/inventoresi"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1374,9 +1374,9 @@ Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/users/sign_i" for 127.0.0.1 at 2017-10-24 11:14:52 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/users/sign_i"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1418,9 +1418,9 @@ Processing by Devise::SessionsController#create as HTML
 Completed 500 Internal Server Error in 2ms
 
 
-  
+
 Mysql2::Error (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)):
-  
+
 mysql2 (0.4.9) lib/mysql2/client.rb:89:in `connect'
 mysql2 (0.4.9) lib/mysql2/client.rb:89:in `initialize'
 activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:109:in `new'
@@ -1544,9 +1544,9 @@ Processing by Devise::SessionsController#create as HTML
 Completed 500 Internal Server Error in 1ms
 
 
-  
+
 Mysql2::Error (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)):
-  
+
 mysql2 (0.4.9) lib/mysql2/client.rb:89:in `connect'
 mysql2 (0.4.9) lib/mysql2/client.rb:89:in `initialize'
 activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
@@ -1900,9 +1900,9 @@ Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/pets" for 127.0.0.1 at 2017-10-24 13:17:45 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/pets"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1931,9 +1931,9 @@ puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2017-10-24 13:21:23 -0500
-  
+
 Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
-  
+
 mysql2 (0.4.9) lib/mysql2/client.rb:89:in `connect'
 mysql2 (0.4.9) lib/mysql2/client.rb:89:in `initialize'
 activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
@@ -1983,7 +1983,7 @@ puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/" for 127.0.0.1 at 2017-10-24 13:21:46 -0500
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -1991,7 +1991,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
 activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
@@ -2050,9 +2050,9 @@ Completed 200 OK in 1286ms (Views: 1278.8ms | ActiveRecord: 1.1ms)
 
 
 Started GET "/pets" for 127.0.0.1 at 2017-10-24 13:22:20 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/pets"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2099,9 +2099,9 @@ puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/pets" for 127.0.0.1 at 2017-10-24 13:23:36 -0500
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  
+
 ActionController::RoutingError (No route matches [GET] "/pets"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2298,15 +2298,15 @@ Processing by PagesController#index as HTML
 Completed 500 Internal Server Error in 262ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "@import ": expected "{", was "url('https://fo..."):
     1: <div class="container-fluid">
     2: <div class="text-center">
     3: 	<%= image_tag("logo")%>
     4: 	<h1 class="title">PET STORE &amp; MORE</h1>
     5: </div>
-    6: 
-  
+    6:
+
 app/assets/stylesheets/application.scss:19
 app/views/pages/index.html.erb:3:in `_app_views_pages_index_html_erb__1680095448304057872_46933283066460'
 Started GET "/" for 127.0.0.1 at 2017-10-24 14:18:39 -0500
@@ -2338,9 +2338,9 @@ Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 1.8ms)
 
 
 Started GET "/employees" for 127.0.0.1 at 2017-10-24 14:18:51 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/employees"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2961,9 +2961,9 @@ Processing by Devise::SessionsController#create as HTML
 Completed 500 Internal Server Error in 89ms (ActiveRecord: 3.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt_ext):
-  
+
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `block in require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:258:in `load_dependency'
@@ -3075,9 +3075,9 @@ Processing by Devise::SessionsController#create as HTML
 Completed 500 Internal Server Error in 79ms (ActiveRecord: 2.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt_ext):
-  
+
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `block in require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:258:in `load_dependency'
@@ -3181,9 +3181,9 @@ Processing by Devise::SessionsController#create as HTML
 Completed 500 Internal Server Error in 197ms (ActiveRecord: 19.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt_ext):
-  
+
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `block in require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:258:in `load_dependency'
@@ -3285,9 +3285,9 @@ Processing by Devise::SessionsController#create as HTML
 Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt_ext):
-  
+
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `block in require'
 activesupport (5.1.4) lib/active_support/dependencies.rb:258:in `load_dependency'
@@ -3768,9 +3768,9 @@ Processing by ToysController#show as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
-  
+
 app/controllers/toys_controller.rb:67:in `set_toy'
 Started PATCH "/toys/1" for 127.0.0.1 at 2017-10-26 10:35:29 -0500
 Processing by ToysController#update as HTML
@@ -3779,9 +3779,9 @@ Processing by ToysController#update as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
-  
+
 app/controllers/toys_controller.rb:67:in `set_toy'
 Started GET "/toys/1/edit" for 127.0.0.1 at 2017-10-26 10:35:51 -0500
 Processing by ToysController#edit as HTML
@@ -3790,9 +3790,9 @@ Processing by ToysController#edit as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
-  
+
 app/controllers/toys_controller.rb:67:in `set_toy'
   [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[36mFood Load (12.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` LIMIT 11[0m
@@ -3812,16 +3812,16 @@ Processing by ToysController#index as HTML
 Completed 500 Internal Server Error in 597ms (ActiveRecord: 14.0ms)
 
 
-  
+
 ActionView::Template::Error (The single-table inheritance mechanism failed to locate the subclass: 'Chew Toy'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Toy.inheritance_column to use another column for that information.):
     16:   </thead>
-    17: 
+    17:
     18:   <tbody>
     19:     <% @toys.each do |toy| %>
     20:       <tr>
     21:         <td><%= toy.brand %></td>
     22:         <td><%= toy.type %></td>
-  
+
 app/views/toys/index.html.erb:19:in `_app_views_toys_index_html_erb__544793275_36066804'
 Started GET "/" for 127.0.0.1 at 2017-10-26 10:38:24 -0500
 Processing by PagesController#index as HTML
@@ -4231,16 +4231,16 @@ Processing by FoodsController#edit as HTML
 Completed 500 Internal Server Error in 572ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `day' for "":String):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= form.label :expiration %>
     21:     <%= form.date_select :expiration, id: :food_expiration %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="field">
-  
+
 app/views/foods/_form.html.erb:21:in `block in _app_views_foods__form_html_erb__22775972_84619560'
 app/views/foods/_form.html.erb:1:in `_app_views_foods__form_html_erb__22775972_84619560'
 app/views/foods/edit.html.erb:3:in `_app_views_foods_edit_html_erb___922124878_84921504'
@@ -4268,7 +4268,7 @@ Processing by FoodsController#index as HTML
 Completed 500 Internal Server Error in 714ms (ActiveRecord: 16.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `expiration' for #<Food:0x3b3be00>
 Did you mean?  expirationDate):
     19:     <% @foods.each do |food| %>
@@ -4278,7 +4278,7 @@ Did you mean?  expirationDate):
     23:         <td><%= food.data %></td>
     24:         <td><%= food.price %></td>
     25:         <td><%= food.foodType %></td>
-  
+
 app/views/foods/index.html.erb:22:in `block in _app_views_foods_index_html_erb__573773447_35741616'
 app/views/foods/index.html.erb:19:in `_app_views_foods_index_html_erb__573773447_35741616'
 Started GET "/foods" for 127.0.0.1 at 2017-10-26 11:23:42 -0500
@@ -4499,7 +4499,7 @@ Processing by StoresController#index as HTML
 Completed 500 Internal Server Error in 558ms (ActiveRecord: 15.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `street_line_1' for nil:NilClass):
     16:   <tbody>
     17:     <% @stores.each do |store| %>
@@ -4508,7 +4508,7 @@ ActionView::Template::Error (undefined method `street_line_1' for nil:NilClass):
     20:         <%= @store.street_line_2 %>
     21:         <%= @store.city +" " + @store.state + ", " + @store.zip_code %></td>
     22:         <td><%= link_to 'Show', store, class: 'btn btn-primary', style: 'color: white' %></td>
-  
+
 app/views/stores/index.html.erb:19:in `block in _app_views_stores_index_html_erb___862356274_86349948'
 app/views/stores/index.html.erb:17:in `_app_views_stores_index_html_erb___862356274_86349948'
 Started GET "/stores" for 127.0.0.1 at 2017-10-26 14:22:39 -0500
@@ -4519,7 +4519,7 @@ Processing by StoresController#index as HTML
 Completed 500 Internal Server Error in 513ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (no implicit conversion of nil into String):
     18:       <tr>
     19:         <td><%= store.street_line_1 %>
@@ -4528,7 +4528,7 @@ ActionView::Template::Error (no implicit conversion of nil into String):
     22:         <td><%= link_to 'Show', store, class: 'btn btn-primary', style: 'color: white' %></td>
     23:         <td><%= link_to 'Edit', edit_store_path(store), class: 'btn btn-warning', style: 'color: white' %></td>
     24:         <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
-  
+
 app/views/stores/index.html.erb:21:in `+'
 app/views/stores/index.html.erb:21:in `block in _app_views_stores_index_html_erb___862356274_80578032'
 app/views/stores/index.html.erb:17:in `_app_views_stores_index_html_erb___862356274_80578032'
@@ -4544,7 +4544,7 @@ Processing by StoresController#index as HTML
 Completed 500 Internal Server Error in 494ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (no implicit conversion of nil into String):
     18:       <tr>
     19:         <td><%= store.street_line_1 %>
@@ -4553,7 +4553,7 @@ ActionView::Template::Error (no implicit conversion of nil into String):
     22:         <td><%= link_to 'Show', store, class: 'btn btn-primary', style: 'color: white' %></td>
     23:         <td><%= link_to 'Edit', edit_store_path(store), class: 'btn btn-warning', style: 'color: white' %></td>
     24:         <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
-  
+
 app/views/stores/index.html.erb:21:in `+'
 app/views/stores/index.html.erb:21:in `block in _app_views_stores_index_html_erb___862356274_57281520'
 app/views/stores/index.html.erb:17:in `_app_views_stores_index_html_erb___862356274_57281520'
@@ -4575,9 +4575,9 @@ Processing by StoresController#destroy as HTML
 Completed 500 Internal Server Error in 46ms (ActiveRecord: 14.0ms)
 
 
-  
+
 ActiveRecord::StatementInvalid (Mysql2::Error: Cannot delete or update a parent row: a foreign key constraint fails (`petstore_development`.`pets`, CONSTRAINT `fk_rails_26db0f5794` FOREIGN KEY (`store_id`) REFERENCES `stores` (`id`)): DELETE FROM `stores` WHERE `stores`.`id` = 1):
-  
+
 app/controllers/stores_controller.rb:57:in `destroy'
 Started DELETE "/stores/1" for 127.0.0.1 at 2017-10-26 14:26:02 -0500
 Processing by StoresController#destroy as HTML
@@ -4590,9 +4590,9 @@ Processing by StoresController#destroy as HTML
 Completed 500 Internal Server Error in 5689ms (ActiveRecord: 5484.2ms)
 
 
-  
+
 ActiveRecord::StatementInvalid (Mysql2::Error: Cannot delete or update a parent row: a foreign key constraint fails (`petstore_development`.`pets`, CONSTRAINT `fk_rails_26db0f5794` FOREIGN KEY (`store_id`) REFERENCES `stores` (`id`)): DELETE FROM `stores` WHERE `stores`.`id` = 1):
-  
+
 app/controllers/stores_controller.rb:57:in `destroy'
   [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
   [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
@@ -4947,137 +4947,176 @@ Completed 200 OK in 1140ms (Views: 1065.7ms | ActiveRecord: 2.0ms)
 
   [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[36mToy Load (11.5ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
-Started GET "/" for 127.0.0.1 at 2017-11-01 09:55:33 -0500
-  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  [1m[35m (5.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (11.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(6205868574647563185, 0)[0m
+  [1m[35m (22.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateToys (20171025142425)
+  [1m[35m (305.8ms)[0m  [1m[35mCREATE TABLE `toys` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `brand` varchar(255), `type` varchar(255), `quantity` int, `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025142425')[0m
+  [1m[35m (50.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStores (20171025142648)
+  [1m[35m (257.1ms)[0m  [1m[35mCREATE TABLE `stores` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `address` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025142648')[0m
+  [1m[35m (98.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmployeeToStore (20171025144045)
+  [1m[35m (702.0ms)[0m  [1m[35mALTER TABLE `employees` ADD `store_id` bigint[0m
+  [1m[35m (344.3ms)[0m  [1m[35mCREATE  INDEX `index_employees_on_store_id`  ON `employees` (`store_id`) [0m
+  [1m[35m (748.3ms)[0m  [1m[35mALTER TABLE `employees` ADD CONSTRAINT `fk_rails_b82b548cdd`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025144045')[0m
+  [1m[35m (42.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPetsToStore (20171025144559)
+  [1m[35m (646.2ms)[0m  [1m[35mALTER TABLE `pets` ADD `store_id` bigint[0m
+  [1m[35m (289.0ms)[0m  [1m[35mCREATE  INDEX `index_pets_on_store_id`  ON `pets` (`store_id`) [0m
+  [1m[35m (880.9ms)[0m  [1m[35mALTER TABLE `pets` ADD CONSTRAINT `fk_rails_26db0f5794`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025144559')[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFoodsToStore (20171026151934)
+  [1m[35m (679.3ms)[0m  [1m[35mALTER TABLE `foods` ADD `store_id` bigint[0m
+  [1m[35m (300.2ms)[0m  [1m[35mCREATE  INDEX `index_foods_on_store_id`  ON `foods` (`store_id`) [0m
+  [1m[35m (925.5ms)[0m  [1m[35mALTER TABLE `foods` ADD CONSTRAINT `fk_rails_a68752f748`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026151934')[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddToysToStore (20171026151957)
+  [1m[35m (401.6ms)[0m  [1m[35mALTER TABLE `toys` ADD `store_id` bigint[0m
+  [1m[35m (200.2ms)[0m  [1m[35mCREATE  INDEX `index_toys_on_store_id`  ON `toys` (`store_id`) [0m
+  [1m[35m (814.3ms)[0m  [1m[35mALTER TABLE `toys` ADD CONSTRAINT `fk_rails_73c2521fcf`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026151957')[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeColumnInToys (20171026154325)
+  [1m[35m (479.6ms)[0m  [1m[35mALTER TABLE `toys` DROP `type`[0m
+  [1m[35m (536.3ms)[0m  [1m[35mALTER TABLE `toys` ADD `toyType` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026154325')[0m
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeFoodsTable (20171026162057)
+  [1m[35m (669.1ms)[0m  [1m[35mALTER TABLE `foods` DROP `expiration`[0m
+  [1m[35m (780.8ms)[0m  [1m[35mALTER TABLE `foods` ADD `expirationDate` date[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026162057')[0m
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DropInventoriesTable (20171026191249)
+  [1m[35m (188.9ms)[0m  [1m[35mDROP TABLE `inventories`[0m
+  [1m[35m (446.5ms)[0m  [1m[35mALTER TABLE `stores` DROP `address`[0m
+  [1m[35m (569.4ms)[0m  [1m[35mALTER TABLE `stores` ADD `street_line_1` varchar(255)[0m
+  [1m[35m (446.3ms)[0m  [1m[35mALTER TABLE `stores` ADD `street_line_2` varchar(255)[0m
+  [1m[35m (512.8ms)[0m  [1m[35mALTER TABLE `stores` ADD `city` varchar(255)[0m
+  [1m[35m (535.9ms)[0m  [1m[35mALTER TABLE `stores` ADD `state` varchar(255)[0m
+  [1m[35m (457.6ms)[0m  [1m[35mALTER TABLE `stores` ADD `zip_code` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026191249')[0m
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (23.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(6205868574647563185)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:26:03 -0600
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (1202.7ms)
-Completed 200 OK in 2600ms (Views: 2572.0ms | ActiveRecord: 0.0ms)
+  Rendered pages/index.html.erb within layouts/application (2837.3ms)
+Completed 200 OK in 3024ms (Views: 3012.4ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-01 09:55:54 -0500
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-06 08:26:10 -0600
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (1.5ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (316.5ms)
-Completed 200 OK in 711ms (Views: 651.8ms | ActiveRecord: 11.3ms)
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (119.0ms)
+Completed 200 OK in 179ms (Views: 164.7ms | ActiveRecord: 0.9ms)
 
 
-Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-01 09:55:57 -0500
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-06 08:26:12 -0600
 Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iK+ziJUMfcLSJ0qj+qnf3XZZI5TfOOvoK5UEYRLO+zVr/HihXoLJFtWgJNRPzlCtADyk2vWcykqMOXPoDWNubg==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-01 14:55:57', `last_sign_in_at` = '2017-10-26 19:48:44', `sign_in_count` = 8, `updated_at` = '2017-11-01 14:55:57' WHERE `users`.`id` = 1[0m
-  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJLWjIN0g5OymBEWqobapFNP4codHJKkSI562u63+zOsU/t3Ylw504kSi69w+coQn7xkA3XfNWrVJBSd1f8H+w==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-06 14:26:12', `last_sign_in_at` = '2017-10-24 16:47:13', `sign_in_count` = 5, `updated_at` = '2017-11-06 14:26:12' WHERE `users`.`id` = 1[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
 Redirected to http://localhost:3000/
-Completed 302 Found in 321ms (ActiveRecord: 7.5ms)
+Completed 302 Found in 257ms (ActiveRecord: 58.4ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-11-01 09:55:57 -0500
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:26:12 -0600
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (8.5ms)
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 258ms (Views: 238.9ms | ActiveRecord: 1.0ms)
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/employees" for 127.0.0.1 at 2017-11-01 09:56:01 -0500
+Started GET "/employees" for 127.0.0.1 at 2017-11-06 08:26:14 -0600
 Processing by EmployeesController#index as HTML
   Rendering employees/index.html.erb within layouts/application
-  [1m[36mEmployee Load (10.2ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
-  Rendered employees/index.html.erb within layouts/application (36.3ms)
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 391ms (Views: 280.6ms | ActiveRecord: 12.7ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 42.9ms | ActiveRecord: 1.5ms)
 
 
-Started GET "/pets" for 127.0.0.1 at 2017-11-01 09:56:02 -0500
-Processing by PetsController#index as HTML
-  Rendering pets/index.html.erb within layouts/application
-  [1m[36mPet Load (8.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
-  Rendered pets/index.html.erb within layouts/application (22.8ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 301ms (Views: 247.7ms | ActiveRecord: 8.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-11-02 10:35:21 -0500
-  [1m[35m (15.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-Processing by PagesController#index as HTML
-  Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (1664.9ms)
-Completed 200 OK in 3402ms (Views: 3380.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-02 10:35:39 -0500
-Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (1.0ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (310.5ms)
-Completed 200 OK in 628ms (Views: 592.1ms | ActiveRecord: 11.0ms)
-
-
-Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-02 10:35:42 -0500
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5egXHx7TBBtgZtuLoj2k8cRzIw/6HVtXQzKR39FjAVqBVvVEW23HMe4V/fJbKX54KywWCKJCy248bPJSxtUyyw==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (15.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-02 15:35:42', `last_sign_in_at` = '2017-11-01 14:55:57', `sign_in_count` = 9, `updated_at` = '2017-11-02 15:35:42' WHERE `users`.`id` = 1[0m
-  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 320ms (ActiveRecord: 15.6ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-11-02 10:35:42 -0500
-Processing by PagesController#index as HTML
-  Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (0.0ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 227ms (Views: 201.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/employees" for 127.0.0.1 at 2017-11-02 10:35:44 -0500
-Processing by EmployeesController#index as HTML
-  Rendering employees/index.html.erb within layouts/application
-  [1m[36mEmployee Load (15.6ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
-  Rendered employees/index.html.erb within layouts/application (31.3ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 332ms (Views: 217.8ms | ActiveRecord: 15.6ms)
-
-
-Started GET "/foods" for 127.0.0.1 at 2017-11-02 10:35:45 -0500
+Started GET "/foods" for 127.0.0.1 at 2017-11-06 08:26:16 -0600
 Processing by FoodsController#index as HTML
   Rendering foods/index.html.erb within layouts/application
-  [1m[36mFood Load (0.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
-  Rendered foods/index.html.erb within layouts/application (15.6ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 270ms (Views: 225.0ms | ActiveRecord: 0.0ms)
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 1.3ms)
 
 
-Started GET "/stores" for 127.0.0.1 at 2017-11-02 10:36:00 -0500
-Processing by StoresController#index as HTML
-  Rendering stores/index.html.erb within layouts/application
-  [1m[36mStore Load (21.9ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
-  Rendered stores/index.html.erb within layouts/application (21.9ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 285ms (Views: 199.0ms | ActiveRecord: 21.9ms)
-
-
-Started GET "/" for 127.0.0.1 at 2017-11-02 10:36:02 -0500
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:23 -0600
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (15.7ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 247ms (Views: 220.1ms | ActiveRecord: 0.0ms)
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/employees" for 127.0.0.1 at 2017-11-02 10:36:47 -0500
-Processing by EmployeesController#index as HTML
-  Rendering employees/index.html.erb within layouts/application
-  [1m[36mEmployee Load (15.6ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
-  Rendered employees/index.html.erb within layouts/application (15.6ms)
-  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 228ms (Views: 196.5ms | ActiveRecord: 15.6ms)
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:25 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:25 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:25 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:38:30 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 890ms (Views: 889.0ms | ActiveRecord: 0.3ms)
