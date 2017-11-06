@@ -48,18 +48,7 @@ html, body {
   font-family: 'Gabriela', serif;
   line-height: 27px;
 }
-.jumbotron {
-  background-image: url("pets.jpg");
- background-repeat: no-repeat;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
-  width: 100%;
-  height: 700px;
-  margin-bottom: 0;
-  padding-top: 0;
-}
+
 //Target the alert notice class and hide it
 .flash-container {
     position: absolute;
