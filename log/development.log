@@ -4947,3 +4947,178 @@ Completed 200 OK in 1140ms (Views: 1065.7ms | ActiveRecord: 2.0ms)
 
   [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[36mToy Load (11.5ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  [1m[35m (11.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(6205868574647563185, 0)[0m
+  [1m[35m (22.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateToys (20171025142425)
+  [1m[35m (305.8ms)[0m  [1m[35mCREATE TABLE `toys` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `brand` varchar(255), `type` varchar(255), `quantity` int, `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025142425')[0m
+  [1m[35m (50.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStores (20171025142648)
+  [1m[35m (257.1ms)[0m  [1m[35mCREATE TABLE `stores` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `address` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025142648')[0m
+  [1m[35m (98.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmployeeToStore (20171025144045)
+  [1m[35m (702.0ms)[0m  [1m[35mALTER TABLE `employees` ADD `store_id` bigint[0m
+  [1m[35m (344.3ms)[0m  [1m[35mCREATE  INDEX `index_employees_on_store_id`  ON `employees` (`store_id`) [0m
+  [1m[35m (748.3ms)[0m  [1m[35mALTER TABLE `employees` ADD CONSTRAINT `fk_rails_b82b548cdd`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025144045')[0m
+  [1m[35m (42.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPetsToStore (20171025144559)
+  [1m[35m (646.2ms)[0m  [1m[35mALTER TABLE `pets` ADD `store_id` bigint[0m
+  [1m[35m (289.0ms)[0m  [1m[35mCREATE  INDEX `index_pets_on_store_id`  ON `pets` (`store_id`) [0m
+  [1m[35m (880.9ms)[0m  [1m[35mALTER TABLE `pets` ADD CONSTRAINT `fk_rails_26db0f5794`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171025144559')[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFoodsToStore (20171026151934)
+  [1m[35m (679.3ms)[0m  [1m[35mALTER TABLE `foods` ADD `store_id` bigint[0m
+  [1m[35m (300.2ms)[0m  [1m[35mCREATE  INDEX `index_foods_on_store_id`  ON `foods` (`store_id`) [0m
+  [1m[35m (925.5ms)[0m  [1m[35mALTER TABLE `foods` ADD CONSTRAINT `fk_rails_a68752f748`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026151934')[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddToysToStore (20171026151957)
+  [1m[35m (401.6ms)[0m  [1m[35mALTER TABLE `toys` ADD `store_id` bigint[0m
+  [1m[35m (200.2ms)[0m  [1m[35mCREATE  INDEX `index_toys_on_store_id`  ON `toys` (`store_id`) [0m
+  [1m[35m (814.3ms)[0m  [1m[35mALTER TABLE `toys` ADD CONSTRAINT `fk_rails_73c2521fcf`
+FOREIGN KEY (`store_id`)
+  REFERENCES `stores` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026151957')[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeColumnInToys (20171026154325)
+  [1m[35m (479.6ms)[0m  [1m[35mALTER TABLE `toys` DROP `type`[0m
+  [1m[35m (536.3ms)[0m  [1m[35mALTER TABLE `toys` ADD `toyType` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026154325')[0m
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeFoodsTable (20171026162057)
+  [1m[35m (669.1ms)[0m  [1m[35mALTER TABLE `foods` DROP `expiration`[0m
+  [1m[35m (780.8ms)[0m  [1m[35mALTER TABLE `foods` ADD `expirationDate` date[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026162057')[0m
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DropInventoriesTable (20171026191249)
+  [1m[35m (188.9ms)[0m  [1m[35mDROP TABLE `inventories`[0m
+  [1m[35m (446.5ms)[0m  [1m[35mALTER TABLE `stores` DROP `address`[0m
+  [1m[35m (569.4ms)[0m  [1m[35mALTER TABLE `stores` ADD `street_line_1` varchar(255)[0m
+  [1m[35m (446.3ms)[0m  [1m[35mALTER TABLE `stores` ADD `street_line_2` varchar(255)[0m
+  [1m[35m (512.8ms)[0m  [1m[35mALTER TABLE `stores` ADD `city` varchar(255)[0m
+  [1m[35m (535.9ms)[0m  [1m[35mALTER TABLE `stores` ADD `state` varchar(255)[0m
+  [1m[35m (457.6ms)[0m  [1m[35mALTER TABLE `stores` ADD `zip_code` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171026191249')[0m
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (23.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(6205868574647563185)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:26:03 -0600
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2837.3ms)
+Completed 200 OK in 3024ms (Views: 3012.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-06 08:26:10 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (119.0ms)
+Completed 200 OK in 179ms (Views: 164.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-06 08:26:12 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJLWjIN0g5OymBEWqobapFNP4codHJKkSI562u63+zOsU/t3Ylw504kSi69w+coQn7xkA3XfNWrVJBSd1f8H+w==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-06 14:26:12', `last_sign_in_at` = '2017-10-24 16:47:13', `sign_in_count` = 5, `updated_at` = '2017-11-06 14:26:12' WHERE `users`.`id` = 1[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 257ms (ActiveRecord: 58.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:26:12 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2017-11-06 08:26:14 -0600
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  Rendered employees/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 42.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2017-11-06 08:26:16 -0600
+Processing by FoodsController#index as HTML
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
+  Rendered foods/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:23 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:25 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:25 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:37:25 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-06 08:38:30 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 890ms (Views: 889.0ms | ActiveRecord: 0.3ms)
+
+
