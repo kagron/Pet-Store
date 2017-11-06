@@ -11,9 +11,11 @@
 /log/*
 /tmp/*
 !/log/.keep
+!/log/development.log
 !/tmp/.keep
 /db/schema.rb
 /node_modules
 /yarn-error.log
+
 
 .byebug_history

@@ -5120,83 +5120,48 @@ Processing by PagesController#index as HTML
   Rendered pages/index.html.erb within layouts/application (1.6ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
 Completed 200 OK in 890ms (Views: 889.0ms | ActiveRecord: 0.3ms)
-Started GET "/" for 127.0.0.1 at 2017-11-06 10:32:09 -0600
-  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (7.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-06 10:34:10 -0600
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (23162.0ms)
-Completed 200 OK in 24500ms (Views: 24405.2ms | ActiveRecord: 0.0ms)
+  Rendered pages/index.html.erb within layouts/application (6301.6ms)
+Completed 200 OK in 7241ms (Views: 7229.7ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/pets" for 127.0.0.1 at 2017-11-06 10:33:44 -0600
-Processing by PetsController#index as HTML
-  Rendering pets/index.html.erb within layouts/application
-  [1m[36mPet Load (4.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
-  Rendered pets/index.html.erb within layouts/application (19.9ms)
-Completed 200 OK in 1067ms (Views: 930.1ms | ActiveRecord: 8.0ms)
-
-
-Started GET "/foods" for 127.0.0.1 at 2017-11-06 10:33:48 -0600
-Processing by FoodsController#index as HTML
-  Rendering foods/index.html.erb within layouts/application
-  [1m[36mFood Load (4.0ms)[0m  [1m[34mSELECT `foods`.* FROM `foods`[0m
-  Rendered foods/index.html.erb within layouts/application (20.0ms)
-Completed 200 OK in 1086ms (Views: 986.9ms | ActiveRecord: 4.0ms)
-
-
-Started GET "/toys" for 127.0.0.1 at 2017-11-06 10:33:50 -0600
-Processing by ToysController#index as HTML
-  Rendering toys/index.html.erb within layouts/application
-  [1m[36mToy Load (8.0ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
-  Rendered toys/index.html.erb within layouts/application (20.0ms)
-Completed 200 OK in 1017ms (Views: 914.4ms | ActiveRecord: 8.0ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-06 10:33:53 -0600
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-06 10:37:38 -0600
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (4.0ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (248.0ms)
-Completed 200 OK in 1405ms (Views: 1335.2ms | ActiveRecord: 15.6ms)
+  Rendered devise/shared/_links.html.erb (16.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (363.9ms)
+Completed 200 OK in 784ms (Views: 694.3ms | ActiveRecord: 1.5ms)
 
 
-Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-06 10:33:55 -0600
-Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (4.0ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (120.0ms)
-Completed 200 OK in 1276ms (Views: 1270.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-06 10:34:02 -0600
-Processing by Devise::RegistrationsController#new as HTML
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (4.0ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (96.0ms)
-Completed 200 OK in 1189ms (Views: 1183.2ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users" for 127.0.0.1 at 2017-11-06 10:34:15 -0600
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C6iD+zUlvrXCI4diErL9DSLtZ0gf6/qzRjqk7QD2r/K8NOmtF9LfwJOO5ZhPbjP4Je8K2qw/wjU2L/zB/jnfEw==", "user"=>{"email"=>"cristian52796@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-06 10:37:42 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Owd59PSuDg4bguZk/JAD02ufvtQc7QMA1gxTFFPOm/hrmf8ijwPs991I0cAfD3RhMJqaZNMvi03Q2M7Ym5nsw==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
   [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists (8.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'cristian52796@yahoo.com' LIMIT 1[0m
-  [1m[35mSQL (12.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('cristian52796@yahoo.com', '$2a$11$R.kbk.UcYbHED18zYzhhc.62a2kfHlZv.kfwncQN4jhFcbopozMqW', '2017-11-06 16:34:15', '2017-11-06 16:34:15')[0m
-  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (8.0ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2017-11-06 16:34:16', `last_sign_in_at` = '2017-11-06 16:34:16', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `updated_at` = '2017-11-06 16:34:16' WHERE `users`.`id` = 1[0m
-  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-06 16:37:42', `last_sign_in_at` = '2017-11-02 15:35:42', `sign_in_count` = 10, `updated_at` = '2017-11-06 16:37:42' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
 Redirected to http://localhost:3000/
-Completed 302 Found in 1176ms (ActiveRecord: 44.0ms)
+Completed 302 Found in 323ms (ActiveRecord: 0.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2017-11-06 10:34:16 -0600
+Started GET "/" for 127.0.0.1 at 2017-11-06 10:37:42 -0600
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (16.0ms)
-  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 988ms (Views: 889.3ms | ActiveRecord: 4.0ms)
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 254ms (Views: 230.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/employees" for 127.0.0.1 at 2017-11-06 10:34:49 -0600
