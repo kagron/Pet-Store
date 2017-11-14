@@ -10,12 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171106165800) do
-=======
-ActiveRecord::Schema.define(version: 20171106170544) do
+ActiveRecord::Schema.define(version: 20171114201700) do
 
-  create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.date "birth_date"
     t.integer "cust_num"
     t.string "first_name"
@@ -27,9 +24,8 @@ ActiveRecord::Schema.define(version: 20171106170544) do
     t.datetime "updated_at", null: false
     t.index ["store_id"], name: "index_customers_on_store_id"
   end
->>>>>>> origin/Customer
 
-  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "emp_no"
     t.date "birth_date"
     t.string "first_name"
@@ -43,7 +39,7 @@ ActiveRecord::Schema.define(version: 20171106170544) do
     t.index ["store_id"], name: "index_employees_on_store_id"
   end
 
-  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
     t.date "data"
     t.float "price", limit: 24
@@ -56,7 +52,7 @@ ActiveRecord::Schema.define(version: 20171106170544) do
     t.index ["store_id"], name: "index_foods_on_store_id"
   end
 
-  create_table "pets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "pets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
     t.string "description"
     t.decimal "price", precision: 10
@@ -65,10 +61,14 @@ ActiveRecord::Schema.define(version: 20171106170544) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "store_id"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["store_id"], name: "index_pets_on_store_id"
   end
 
-  create_table "stores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "stores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "street_line_1"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20171106170544) do
     t.integer "zip_code"
   end
 
-  create_table "toys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "toys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "brand"
     t.integer "quantity"
     t.text "description"
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 20171106170544) do
     t.index ["store_id"], name: "index_toys_on_store_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

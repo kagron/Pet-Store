@@ -5306,3 +5306,539 @@ Processing by CustomersController#index as HTML
   Rendered customers/index.html.erb within layouts/application (8.0ms)
   [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
 Completed 200 OK in 924ms (Views: 849.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(6205868574647563185, 0)[0m
+  [1m[35m (22.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangePetTable (20171106165800)
+  [1m[35m (780.5ms)[0m  [1m[35mALTER TABLE `pets` DROP `breed`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171106165800')[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCustomers (20171106170544)
+  [1m[35m (312.1ms)[0m  [1m[35mCREATE TABLE `customers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `birth_date` date, `cust_num` int, `first_name` varchar(255), `last_name` varchar(255), `gender` varchar(255), `phone_num` varchar(255), `store_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_customers_on_store_id`  (`store_id`)) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171106170544')[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAttachmentAvatarToPets (20171114201700)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(6205868574647563185)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(6205868574647563185, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddAttachmentAvatarToPets (20171114201700)
+  [1m[35m (684.3ms)[0m  [1m[35mALTER TABLE `pets` ADD `avatar_file_name` varchar(255)[0m
+  [1m[35m (813.2ms)[0m  [1m[35mALTER TABLE `pets` ADD `avatar_content_type` varchar(255)[0m
+  [1m[35m (725.9ms)[0m  [1m[35mALTER TABLE `pets` ADD `avatar_file_size` int[0m
+  [1m[35m (768.8ms)[0m  [1m[35mALTER TABLE `pets` ADD `avatar_updated_at` datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171114201700')[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (22.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(6205868574647563185)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-14 14:20:53 -0600
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2368.6ms)
+Completed 200 OK in 2556ms (Views: 2541.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-14 14:20:58 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (125.7ms)
+Completed 200 OK in 186ms (Views: 173.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-14 14:20:59 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pcgo20CyaWL+mUB20niqYNq5eBaNiMKPruQcph3MiUZAzB3u10GQ9wPVBxbDsRZWlHYdhFtGLRzKphASAASh5g==", "user"=>{"email"=>"kagron12@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'kagron12@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-14 20:21:00', `last_sign_in_at` = '2017-11-06 14:26:12', `sign_in_count` = 6, `updated_at` = '2017-11-14 20:21:00' WHERE `users`.`id` = 1[0m
+  [1m[35m (37.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 256ms (ActiveRecord: 50.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-14 14:21:00 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:21:02 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 46.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/1/edit" for 127.0.0.1 at 2017-11-14 14:21:04 -0600
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (0.9ms)
+  Rendered pets/edit.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/home/kyle/Documents/Databases/Pet-Store/app/views/pets/_form.html.erb:1: syntax error, unexpected tLABEL
+odel: pet, local: true), html: { multipart: true } do |form|
+                              ^
+/home/kyle/Documents/Databases/Pet-Store/app/views/pets/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+, html: { multipart: true } do |form| @output_buffer.safe_ap
+                              ^
+/home/kyle/Documents/Databases/Pet-Store/app/views/pets/_form.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/pets/_form.html.erb:1: syntax error, unexpected tLABEL
+app/views/pets/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/pets/_form.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/pets/edit.html.erb:3:in `_app_views_pets_edit_html_erb__121501221981035638_70161060024080'
+Started GET "/pets/1/edit" for 127.0.0.1 at 2017-11-14 14:21:19 -0600
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (29.6ms)
+  Rendered pets/edit.html.erb within layouts/application (30.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/pets/1" for 127.0.0.1 at 2017-11-14 14:21:54 -0600
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDxKv+IsaXssviwGBvu5A4YkDkY/PNjrxctb3dO+iNQ35Ml3rximRqKhWwRLNYxdh/OJsV+YfJxuNj+zRyjZjQ==", "pet"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9f4432dc38 @tempfile=#<Tempfile:/tmp/RackMultipart20171114-4095-1a31k62.jpg>, @original_filename="impossibly-cute-puppy-21.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[avatar]\"; filename=\"impossibly-cute-puppy-21.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"jeffry", "description"=>"a small baby poodle", "price"=>"10", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"23", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"1"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-qvw93f.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-dvw026.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-dvw026.jpg[0]'
+Command :: convert '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-dvw026.jpg[0]' -auto-orient -resize "300x300>" '/tmp/a2072ffe8ff806bfba1727d77911a39220171114-4095-91rm28'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-dvw026.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-dvw026.jpg[0]'
+Command :: convert '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-dvw026.jpg[0]' -auto-orient -resize "100x100>" '/tmp/a2072ffe8ff806bfba1727d77911a39220171114-4095-1fwo7h3'
+Command :: file -b --mime '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-1f3tfvf.jpg'
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (2.9ms)
+  Rendered pets/edit.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 636ms (Views: 37.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2017-11-14 14:21:59 -0600
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT `stores`.* FROM `stores`[0m
+  Rendered stores/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 242ms (Views: 38.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/new" for 127.0.0.1 at 2017-11-14 14:22:00 -0600
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (2.6ms)
+  Rendered stores/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 51ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stores" for 127.0.0.1 at 2017-11-14 14:22:15 -0600
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ynh5y1875i/lCBwphUQEj0eNUvns2w4DtXyZs2LRvurcXTSXNCq6vfsHPpzQRkNGDXaeQsZAZl/h9tD/UhFZng==", "store"=>{"street_line_1"=>"123 Washington Street", "street_line_2"=>"", "city"=>"Oswego", "state"=>"Illinois", "zip_code"=>"60543"}, "commit"=>"Create Store"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `stores` (`created_at`, `updated_at`, `street_line_1`, `street_line_2`, `city`, `state`, `zip_code`) VALUES ('2017-11-14 20:22:15', '2017-11-14 20:22:15', '123 Washington Street', '', 'Oswego', 'Illinois', 60543)[0m
+  [1m[35m (56.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/stores/1
+Completed 302 Found in 60ms (ActiveRecord: 56.5ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2017-11-14 14:22:15 -0600
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:22:17 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/1/edit" for 127.0.0.1 at 2017-11-14 14:22:18 -0600
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (3.7ms)
+  Rendered pets/edit.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/pets/1" for 127.0.0.1 at 2017-11-14 14:22:22 -0600
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXYrAC899Q5fS6qWgCjOH6vPl8E+UZztrtSC+m+SuOSQacsTJP2qBr1YQuPIl/6Co0uKMWfIpQr4k3IGvuc3ow==", "pet"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9f38207a40 @tempfile=#<Tempfile:/tmp/RackMultipart20171114-4095-1485sxl.jpg>, @original_filename="impossibly-cute-puppy-21.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[avatar]\"; filename=\"impossibly-cute-puppy-21.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"jeffry", "description"=>"a small baby poodle", "price"=>"10", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"23", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-7dchok.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-elhjk7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-elhjk7.jpg[0]'
+Command :: convert '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-elhjk7.jpg[0]' -auto-orient -resize "300x300>" '/tmp/7b6cd48d85e7dd797f111566838efb6320171114-4095-1r156qo'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-elhjk7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-elhjk7.jpg[0]'
+Command :: convert '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-elhjk7.jpg[0]' -auto-orient -resize "100x100>" '/tmp/7b6cd48d85e7dd797f111566838efb6320171114-4095-ntk8l2'
+Command :: file -b --mime '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-h88s56.jpg'
+  [1m[36mStore Load (0.8ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `pets` SET `store_id` = 1, `avatar_file_name` = 'impossibly-cute-puppy-21.jpg', `avatar_content_type` = 'image/jpeg', `avatar_file_size` = 33543, `avatar_updated_at` = '2017-11-14 20:22:22', `updated_at` = '2017-11-14 20:22:22' WHERE `pets`.`id` = 1[0m
+  [1m[35m (118.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/1
+Completed 302 Found in 223ms (ActiveRecord: 120.2ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2017-11-14 14:22:23 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: <p><%= image_tag @user.avatar.url %></p>
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @pet.name %>
+  
+app/views/pets/show.html.erb:2:in `_app_views_pets_show_html_erb__1599154197589891119_70160908164060'
+Started GET "/pets/1" for 127.0.0.1 at 2017-11-14 14:22:34 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+Started GET "/pets/1/edit" for 127.0.0.1 at 2017-11-14 14:25:00 -0600
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/edit.html.erb within layouts/application
+  Rendered pets/_form.html.erb (4.7ms)
+  Rendered pets/edit.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/pets/1" for 127.0.0.1 at 2017-11-14 14:25:04 -0600
+Processing by PetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmZxpL+03NmZDywBwR9AILBCP1SKzp6EEMG0AiQPFfGHeZG3tHSD0XscxHSJoHC9uMYipNNXp2NGhkT+9Xqatg==", "pet"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9f4b0f98c0 @tempfile=#<Tempfile:/tmp/RackMultipart20171114-4095-pozyqb.jpg>, @original_filename="pupper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[avatar]\"; filename=\"pupper.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"jeffry", "description"=>"a small baby poodle", "price"=>"10", "dob(1i)"=>"2017", "dob(2i)"=>"10", "dob(3i)"=>"23", "typeOfAnimal"=>"dog", "store_id"=>"1"}, "commit"=>"Update Pet", "id"=>"1"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-14upy83.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-j9v8ea.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-j9v8ea.jpg[0]'
+Command :: convert '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-j9v8ea.jpg[0]' -auto-orient -resize "300x300>" '/tmp/e51bf1f59ffbdf7365a029355c0c1b4120171114-4095-1j7kyiz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-j9v8ea.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-j9v8ea.jpg[0]'
+Command :: convert '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-j9v8ea.jpg[0]' -auto-orient -resize "100x100>" '/tmp/e51bf1f59ffbdf7365a029355c0c1b4120171114-4095-1ftxizx'
+Command :: file -b --mime '/tmp/b24fb9e5effed88af6c2590b9a7ab9a420171114-4095-y39idc.jpg'
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE `pets` SET `avatar_file_name` = 'pupper.jpg', `avatar_file_size` = 44411, `avatar_updated_at` = '2017-11-14 20:25:04', `updated_at` = '2017-11-14 20:25:04' WHERE `pets`.`id` = 1[0m
+[paperclip] deleting /home/kyle/Documents/Databases/Pet-Store/public/system/pets/avatars/000/000/001/original/impossibly-cute-puppy-21.jpg
+[paperclip] deleting /home/kyle/Documents/Databases/Pet-Store/public/system/pets/avatars/000/000/001/medium/impossibly-cute-puppy-21.jpg
+[paperclip] deleting /home/kyle/Documents/Databases/Pet-Store/public/system/pets/avatars/000/000/001/thumb/impossibly-cute-puppy-21.jpg
+  [1m[35m (59.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/1
+Completed 302 Found in 162ms (ActiveRecord: 60.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2017-11-14 14:25:04 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:25:20 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:26:29 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:26:46 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:26:57 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:28:24 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:29:18 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/new" for 127.0.0.1 at 2017-11-14 14:29:22 -0600
+Processing by PetsController#new as HTML
+  Rendering pets/new.html.erb within layouts/application
+  Rendered pets/_form.html.erb (2.7ms)
+  Rendered pets/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pets" for 127.0.0.1 at 2017-11-14 14:29:50 -0600
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m3qzSJ5N0Pu7dH+wkMhxUbG4/F5Kk+cyOOAfp+e5VBhP00oStj2i2oFvtgZ1D9VP0uQ04GzfhnV5EA59LAmSdA==", "pet"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9f44211c00 @tempfile=#<Tempfile:/tmp/RackMultipart20171114-4095-1dewnsn.jpg>, @original_filename="impossibly-cute-puppy-21.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[avatar]\"; filename=\"impossibly-cute-puppy-21.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Andrei", "description"=>"fugly slut", "price"=>"0.03", "dob(1i)"=>"2017", "dob(2i)"=>"11", "dob(3i)"=>"14", "typeOfAnimal"=>"skunk", "store_id"=>"1"}, "commit"=>"Create Pet"}
+Command :: file -b --mime '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-12mwgz7.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-zqmfml.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-zqmfml.jpg[0]'
+Command :: convert '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-zqmfml.jpg[0]' -auto-orient -resize "300x300>" '/tmp/30e3d57c79e1e8f118d441cbdb6ffc2520171114-4095-pqzp4f'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-zqmfml.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-zqmfml.jpg[0]'
+Command :: convert '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-zqmfml.jpg[0]' -auto-orient -resize "100x100>" '/tmp/30e3d57c79e1e8f118d441cbdb6ffc2520171114-4095-jhy027'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/cde7a078af303096f6be22e79b3aa77220171114-4095-1vfxysc.jpg'
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `dob`, `typeOfAnimal`, `created_at`, `updated_at`, `store_id`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('Andrei', 'fugly slut', 0, '2017-11-14', 'skunk', '2017-11-14 20:29:51', '2017-11-14 20:29:51', 1, 'impossibly-cute-puppy-21.jpg', 'image/jpeg', 33543, '2017-11-14 20:29:50')[0m
+  [1m[35m (131.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 275ms (ActiveRecord: 131.9ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-11-14 14:29:51 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:29:53 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:30:06 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:30:20 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2017-11-14 14:30:27 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 1 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:32:10 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:32:32 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:32:39 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/new" for 127.0.0.1 at 2017-11-14 14:33:55 -0600
+Processing by PetsController#new as HTML
+  Rendering pets/new.html.erb within layouts/application
+  Rendered pets/_form.html.erb (2.8ms)
+  Rendered pets/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pets" for 127.0.0.1 at 2017-11-14 14:34:09 -0600
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9O9Iu5RXqVfYAOqh1sTjuo8JY5FRoQr1/4+fNGk0iBcgRrHhvCfbduIbIxczA0ek7FWrL3fta7K+f47uooROew==", "pet"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f9f4a73a7a8 @tempfile=#<Tempfile:/tmp/RackMultipart20171114-4095-14yp9f0.jpg>, @original_filename="kitten.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[avatar]\"; filename=\"kitten.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Cristian", "description"=>"A cute kitten", "price"=>"100", "dob(1i)"=>"2017", "dob(2i)"=>"11", "dob(3i)"=>"14", "typeOfAnimal"=>"Cat", "store_id"=>"1"}, "commit"=>"Create Pet"}
+Command :: file -b --mime '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-3hmfra.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-15vhbky.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-15vhbky.jpg[0]'
+Command :: convert '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-15vhbky.jpg[0]' -auto-orient -resize "300x300>" '/tmp/b51b5000bf6746574c69fd9192216c9720171114-4095-17mp0s5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-15vhbky.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-15vhbky.jpg[0]'
+Command :: convert '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-15vhbky.jpg[0]' -auto-orient -resize "100x100>" '/tmp/b51b5000bf6746574c69fd9192216c9720171114-4095-1vysdjf'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/6da89cd09ab7937478a1d47d2093853620171114-4095-19t24gq.jpg'
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `dob`, `typeOfAnimal`, `created_at`, `updated_at`, `store_id`, `avatar_file_name`, `avatar_content_type`, `avatar_file_size`, `avatar_updated_at`) VALUES ('Cristian', 'A cute kitten', 100, '2017-11-14', 'Cat', '2017-11-14 20:34:09', '2017-11-14 20:34:09', 1, 'kitten.jpg', 'image/jpeg', 154360, '2017-11-14 20:34:09')[0m
+  [1m[35m (84.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/3
+Completed 302 Found in 230ms (ActiveRecord: 85.2ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2017-11-14 14:34:10 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 14:34:13 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2017-11-14 14:43:26 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 3 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 15:00:10 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pets/2" for 127.0.0.1 at 2017-11-14 15:03:25 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 2 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/toys" for 127.0.0.1 at 2017-11-14 15:04:01 -0600
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (0.8ms)[0m  [1m[34mSELECT `toys`.* FROM `toys`[0m
+  Rendered toys/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 48.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-11-14 15:04:01 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.8ms)
+
+

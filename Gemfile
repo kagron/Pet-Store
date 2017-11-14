@@ -13,6 +13,9 @@ gem 'rails-erd', require: false, group: :development
 gem 'jquery-rails'
 # Use Devise for user authentication
 gem 'devise'
+# Use Paperclip
+gem "paperclip", "~> 5.0.0"
+
 # bcrypt for devise
 #gem 'bcrypt', '~> 3.1.11'
 #gem 'bcrypt', '3.1.10', platforms: [:ruby, :x64_mingw]

@@ -2,35 +2,29 @@
 
 <h1>Pets</h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Dob</th>
-      <th>Type of animal</th>
-      <th>Store Id</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @pets.each do |pet| %>
-      <tr>
-        <td><%= pet.name %></td>
-        <td><%= pet.description %></td>
-        <td><%= pet.price %></td>
-        <td><%= pet.dob %></td>
-        <td><%= pet.typeOfAnimal %></td>
-        <td><%= pet.store_id %></td>
-        <td><%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %></td>
-        <td><%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %></td>
-        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+
+<div class="row">
+  <% @pets.each do |pet| %>
+    <div class="col-md-4">
+
+
+      <%= image_tag pet.avatar.url(:medium) %><br/>
+      <h1><%= pet.name %></h1> <br/>
+      <h2>$<%= pet.price %></h2> <br />
+      <%= pet.description %>
+      <%= pet.dob %>
+      <%= pet.typeOfAnimal %>
+      <%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %>
+      <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %>
+      <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
+
+
+    </div>
+  <% end %>
+</div>
+
 
 <br>
 
