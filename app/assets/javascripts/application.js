@@ -17,6 +17,7 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require jquery3
+//= require Chart.min
 $(document).on('turbolinks:load', function(){
   $('.alert').delay(2000).fadeOut(2000);
 });

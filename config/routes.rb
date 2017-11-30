@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'reports/index'
+
+  resources :reports
   resources :customers
   resources :stores
   resources :toys
