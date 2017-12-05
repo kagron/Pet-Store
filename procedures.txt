@@ -1,0 +1,68 @@
+mysql> delimiter //
+mysql> CREATE PROCEDURE prc_add_food_to_store (S_ID IN INT) AS  BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20);
+    -> end//
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN INT) AS  BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price' at line 1
+mysql> CREATE PROCEDURE prc_add_food_to_store (S_ID IN NUMBER) AS  BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20, S_ID); end//
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN NUMBER) AS  BEGIN INSERT INTO foods (data, expirationDate, foodType, name, pr' at line 1
+mysql> CREATE PROCEDURE prc_add_food_to_store (INOUT S_ID INT) AS  BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20, S_ID); end//
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS  BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quanti' at line 1
+mysql> CREATE PROCEDURE prc_add_food_to_store (INOUT S_ID INT) BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20, S_ID); end;//
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> CALL prc_add_food_to_store(1)//
+ERROR 1414 (42000): OUT or INOUT argument 1 for routine PetStore_development.prc_add_food_to_store is not a variable or NEW pseudo-variable in BEFORE trigger
+mysql> CREATE PROCEDURE prc_add_food_to_store (IN S_ID INT) BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20, S_ID); end;//
+ERROR 1304 (42000): PROCEDURE prc_add_food_to_store already exists
+mysql> CREATE OR REPLACE PROCEDURE prc_add_food_to_store (IN S_ID INT) BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20, S_ID); end;//
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PROCEDURE prc_add_food_to_store (IN S_ID INT) BEGIN INSERT INTO foods (data, exp' at line 1
+mysql> drop procedure prc_add_food_to_store//
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE PROCEDURE prc_add_food_to_store (IN S_ID INT) BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20, S_ID); end;//
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call prc_add_food_to_store(1)//
+ERROR 1364 (HY000): Field 'created_at' doesn't have a default value
+mysql> drop procedure prc_add_food_to_store//
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> desc foods;
+    -> //
++---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| id                  | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| name                | varchar(255) | YES  |     | NULL    |                |
+| data                | date         | YES  |     | NULL    |                |
+| price               | float        | YES  |     | NULL    |                |
+| foodType            | varchar(255) | YES  |     | NULL    |                |
+| quantity            | int(11)      | YES  |     | NULL    |                |
+| created_at          | datetime     | NO   |     | NULL    |                |
+| updated_at          | datetime     | NO   |     | NULL    |                |
+| store_id            | bigint(20)   | YES  | MUL | NULL    |                |
+| expirationDate      | date         | YES  |     | NULL    |                |
+| avatar_file_name    | varchar(255) | YES  |     | NULL    |                |
+| avatar_content_type | varchar(255) | YES  |     | NULL    |                |
+| avatar_file_size    | int(11)      | YES  |     | NULL    |                |
+| avatar_updated_at   | datetime     | YES  |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+14 rows in set (0.00 sec)
+
+mysql> CREATE PROCEDURE prc_add_food_to_store (IN S_ID INT) BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,created_at,updated_at,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20,NOW(),NOW(), S_ID); end;//
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call prc_add_food_to_store(1)//
+Query OK, 1 row affected, 1 warning (0.07 sec)
+
+mysql> SELECT * FROM FOODS;
+    -> //
+ERROR 1146 (42S02): Table 'PetStore_development.FOODS' doesn't exist
+mysql> SELECT * FROM foods//
++----+-----------+------------+-------+------------+----------+---------------------+---------------------+----------+----------------+------------------+---------------------+------------------+-------------------+
+| id | name      | data       | price | foodType   | quantity | created_at          | updated_at          | store_id | expirationDate | avatar_file_name | avatar_content_type | avatar_file_size | avatar_updated_at |
++----+-----------+------------+-------+------------+----------+---------------------+---------------------+----------+----------------+------------------+---------------------+------------------+-------------------+
+|  1 | Treats    | 2017-10-24 |    10 | cookies    |       20 | 2017-10-24 18:28:48 | 2017-11-30 19:49:18 |        1 | 2017-11-30     | NULL             | NULL                |             NULL | NULL              |
+|  2 | Milk Bone | 2017-11-30 |    20 | Dog Treats |       20 | 2017-11-30 14:17:48 | 2017-11-30 14:17:48 |        1 | 2018-01-01     | NULL             | NULL                |             NULL | NULL              |
++----+-----------+------------+-------+------------+----------+---------------------+---------------------+----------+----------------+------------------+---------------------+------------------+-------------------+
+2 rows in set (0.00 sec)
+

@@ -1,0 +1,13 @@
+mysql> delimiter //
+mysql> CREATE PROCEDURE prc_add_food_to_store (IN S_ID INT) BEGIN INSERT INTO foods (data, expirationDate, foodType, name, price, quantity,created_at,updated_at,store_id) VALUES (NOW(), "2018-01-01","Dog Treats","Milk Bone",20.0,20,NOW(),NOW(), S_ID); end;//
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE PROCEDURE prc_add_toys_to_store (IN S_ID INT) BEGIN INSERT INTO toys (brand, description, quantity, price,created_at,updated_at,store_id) VALUES ("Kong", "Chew Toy", 20,20.0,NOW(),NOW(), S_ID); end;//
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call prc_add_toys_to_store//
+ERROR 1318 (42000): Incorrect number of arguments for PROCEDURE PetStore_development.prc_add_toys_to_store; expected 1, got 0
+mysql> call prc_add_toys_to_store(1)//
+Query OK, 1 row affected (0.07 sec)
+
+mysql> \q
