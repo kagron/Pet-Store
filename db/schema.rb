@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114201700) do
+ActiveRecord::Schema.define(version: 20171130003251) do
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.date "birth_date"
@@ -49,6 +49,10 @@ ActiveRecord::Schema.define(version: 20171114201700) do
     t.datetime "updated_at", null: false
     t.bigint "store_id"
     t.date "expirationDate"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["store_id"], name: "index_foods_on_store_id"
   end
 
@@ -86,6 +90,11 @@ ActiveRecord::Schema.define(version: 20171114201700) do
     t.datetime "updated_at", null: false
     t.bigint "store_id"
     t.string "toyType"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.float "price", limit: 53
     t.index ["store_id"], name: "index_toys_on_store_id"
   end
 
