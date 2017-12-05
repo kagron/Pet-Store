@@ -1,0 +1,67 @@
+<style>
+    .jumbotron {
+        margin-top: 3%;
+        background-color: white;
+    }
+
+
+</style>
+
+
+<div class="jumbotron col-10 offset-1">
+    <div class="row col-12">
+    <div class="text-center">
+        <h1 class="col-4 offset-4">Reports</h1>
+    </div>
+    <br>
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-3" style="height:500px; width:700px;">
+            <canvas id="petsPerMonth" width="400" height="400"></canvas>
+        </div>
+
+
+    <div class="row col-12">
+      <div class="text-center">
+        <%= link_to "Back", "pages/home", :class=>"btn col-2 offset-10"%>
+    </div>
+</div>
+
+
+<script>
+var ctx = document.getElementById('petsPerMonth').getContext('2d');
+var nums = [1,1,0,3,4,4,0,2,3,2,1,7];
+//<%= @monthNums.to_json.html_safe %>
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        datasets: [{
+            label: "Pets",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: nums
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        title:{
+            display:true,
+            text:'Pets Per Month'
+        },
+        scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+  }
+});
+
+
+</script>

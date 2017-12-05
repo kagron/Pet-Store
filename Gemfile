@@ -15,7 +15,7 @@ gem 'jquery-rails'
 gem 'devise'
 # Use Paperclip
 gem "paperclip", "~> 5.0.0"
-
+gem 'chart-js-rails'
 # bcrypt for devise
 #gem 'bcrypt', '~> 3.1.11'
 #gem 'bcrypt', '3.1.10', platforms: [:ruby, :x64_mingw]
