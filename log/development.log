@@ -7886,3 +7886,40 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 1008ms (Views: 945.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-04 18:17:15 -0600
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2017.5ms)
+Completed 200 OK in 3362ms (Views: 3260.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-04 18:18:22 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 944ms (Views: 865.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-04 18:18:26 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 1053ms (Views: 982.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-04 18:18:29 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 1627ms (Views: 1468.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-04 18:19:22 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 953ms (Views: 890.8ms | ActiveRecord: 0.0ms)
+
+
