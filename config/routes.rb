@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'reports/index'
 
   resources :reports
   resources :customers
@@ -11,5 +10,7 @@ Rails.application.routes.draw do
   resources :pets
   resources :employees
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'reports', to: 'reports#index'
+
   root 'pages#index'
 end
