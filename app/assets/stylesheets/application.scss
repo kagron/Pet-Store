@@ -61,6 +61,15 @@ html, body {
     border-color: rgba(0,0,0,0.5);
     color: black;
 }
+// Pet img
+.pet-img {
+  height: 300px;
+}
+
+.well h1,
+.well h2 {
+  margin: 0;
+}
 @media (max-width: 1023px) {
   .jumbotron {
     height: 200px;

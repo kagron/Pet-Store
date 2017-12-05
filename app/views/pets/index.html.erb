@@ -2,25 +2,22 @@
 
 <h1>Pets</h1>
 
-
-
-
 <div class="row">
   <% @pets.each do |pet| %>
     <div class="col-md-4">
-
-
-      <%= image_tag pet.avatar.url(:medium) %><br/>
-      <h1><%= pet.name %></h1> <br/>
-      <h2>$<%= pet.price %></h2> <br />
-      <%= pet.description %>
-      <%= pet.dob %>
-      <%= pet.typeOfAnimal %>
-      <%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %>
-      <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %>
-      <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
-
-
+      <div class="well">
+        <div class="pet-img">
+            <%= image_tag pet.avatar.url(:medium) %>
+        </div>
+        <h1><%= pet.name %></h1> <br/>
+        <h2>$<%= pet.price %></h2> <br />
+        <strong>Type of Animal:</strong> <%= pet.typeOfAnimal %><br>
+        <strong>Description:</strong> <%= pet.description %><br />
+        <strong>Date of Birth:</strong> <%= pet.dob %><br />
+        <%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %>
+        <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %>
+        <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
+      </div>
     </div>
   <% end %>
 </div>

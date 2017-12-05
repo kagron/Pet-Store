@@ -10,37 +10,37 @@ class ReportsController < ApplicationController
   def petsPerMonth ()
         @monthNums = Array.new(12, 0)
         @pets.each do |pt|
-            month = pt["petBought"]
+            month = pt["petAdded"]
             month = month.month
 
-            puts pt.petsBought + 1
+            puts pt.pet + 1
             case month
             when 1
-            @monthNums[0] += pt.petsBought
+            @monthNums[0] += pt.pet
             when 2
-            @monthNums[1] += pt.petsBought
+            @monthNums[1] += pt.pet
             when 3
-            @monthNums[2] += pt.petsBought
+            @monthNums[2] += pt.pet
              when 4
-            @monthNums[3] += pt.petsBought
+            @monthNums[3] += pt.pet
              when 5
-            @monthNums[4] += pt.petsBought
+            @monthNums[4] += pt.pet
             when 6
-            @monthNums[5] += pt.petsBought
+            @monthNums[5] += pt.pet
             when 7
-            @monthNums[6] += pt.petsBought
+            @monthNums[6] += pt.pet
             when 8
-            @monthNums[7] += pt.petsBought
+            @monthNums[7] += pt.pet
             when 9
-            @monthNums[8] += pt.petsBought
+            @monthNums[8] += pt.pet
             when 10
-            @monthNums[9] += pt.petsBought
+            @monthNums[9] += pt.pet
             when 11
-            @monthNums[10] += pt.petsBought
+            @monthNums[10] += pt.pet
             when 12
-            @monthNums[11] += pt.petsBought
+            @monthNums[11] += pt.pet
             else
-            puts "no purchase"
+            puts "no addition"
             end
 
 
