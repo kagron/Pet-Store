@@ -1,6 +1,6 @@
 <style>
     .jumbotron {
-        margin-top: 3%;
+        margin-top: 5%;
         background-color: white;
     }
 
@@ -23,14 +23,14 @@
 
     <div class="row col-12">
       <div class="text-center">
-        <%= link_to "Back", "pages/home", :class=>"btn col-2 offset-10"%>
+        <%= link_to "Back", root_path, :class=>"btn col-2 offset-10"%>
     </div>
 </div>
 
 
 <script>
 var ctx = document.getElementById('petsPerMonth').getContext('2d');
-var nums = [1,1,0,3,4,4,0,2,3,2,1,7];
+var nums = [4,2,3,4,2,1,4,2,2,3,4,7]
 //<%= @monthNums.to_json.html_safe %>
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -60,7 +60,7 @@ var chart = new Chart(ctx, {
             }
         }]
     }
-  }
+    }
 });
 
 

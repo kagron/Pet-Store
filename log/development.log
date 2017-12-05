@@ -8298,3 +8298,128 @@ Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 5.3ms)
 >>>>>>> 47aae20e65483ea9c4c051dca4931d6881e2b200
 
 
+  [1m[35m (42.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-05 10:47:58 -0600
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4442.3ms)
+Completed 200 OK in 5875ms (Views: 5790.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 10:49:20 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 956ms (Views: 884.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-05 10:49:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (224.1ms)
+Completed 200 OK in 1414ms (Views: 1349.7ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 10:49:35 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FW1jUhAHLmxLSdpHbii0EWIGjMDC2qMMNKAra+Nk5EBEPvPVj9i7Ycj+X/0YDGtucHsWvQh4Df7wW11nc2ISfg==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 256ms (ActiveRecord: 4.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FW1jUhAHLmxLSdpHbii0EWIGjMDC2qMMNKAra+Nk5EBEPvPVj9i7Ycj+X/0YDGtucHsWvQh4Df7wW11nc2ISfg==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 1385ms (Views: 1165.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 10:49:42 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5N5HWv5wwC4a/GbO3uPnjU/qWIIodAgRGsEAYgn2C5h7b34lBWXqktp/xDWYaZPe8vkPU0HUOWeZq0mFEMMFA==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 226ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5N5HWv5wwC4a/GbO3uPnjU/qWIIodAgRGsEAYgn2C5h7b34lBWXqktp/xDWYaZPe8vkPU0HUOWeZq0mFEMMFA==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 1393ms (Views: 1170.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-05 10:49:53 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 1180ms (Views: 1177.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 10:50:03 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hSPZBm+QhkFxF2Kwwoy+/4wNOyp+5/YGSne7T6VzcD7K8Tx82h8mecPCSZezftBoE+awSI4A7ndq8rW2HTtexQ==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (8.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'cramirez02@aurora.edu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 1801ms (Views: 1099.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-05 10:50:11 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (96.1ms)
+Completed 200 OK in 1283ms (Views: 1278.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 10:50:31 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DFw7Ug2xSxQ+5OQnywhLYPYlqLrcf7kWyshDM7RpI21YuBq1+lQIdNMFirpCP5SkaUM3yHTUBaf0FcAXtdSsw==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-05 16:50:32', `last_sign_in_at` = '2017-11-30 15:15:59', `sign_in_count` = 3, `updated_at` = '2017-12-05 16:50:32' WHERE `users`.`id` = 2[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 716ms (ActiveRecord: 45.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 10:50:32 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 936ms (Views: 868.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 10:50:42 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1034ms (Views: 964.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 10:50:52 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 972ms (Views: 897.6ms | ActiveRecord: 0.0ms)
+
+
