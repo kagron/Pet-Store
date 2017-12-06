@@ -10093,3 +10093,513 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 20:57:45 -0600
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.9-x86 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.9-x86 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 20:58:13 -0600
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.9-x86 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.9-x86 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:59:00 -0600
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.9-x86 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.9-x86 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:59:49 -0600
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(4426626897251892900, 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddAdminToUsers (20171206004852)
+  [1m[35m (280.2ms)[0m  [1m[35mALTER TABLE `users` ADD `admin` tinyint(1)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171206004852')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(4426626897251892900)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:01:58 -0600
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (124282.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 126649ms (Views: 126538.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:05:39 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1573ms (Views: 1485.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:06:30 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1569ms (Views: 1480.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:08:56 -0600
+  
+SyntaxError (C:/Users/Cris/Database_Project/Pet-Store-master/Pet-Store/app/controllers/reports_controller.rb:94: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/reports_controller.rb:94: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:10:17 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1650ms (Views: 1563.3ms | ActiveRecord: 7.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-05 21:10:34 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zTQZa48jLalztQmGUFi01ZNYOQeDP/SSol7J9w/g7vPcqi8VZwVzb6XP4mxQAwnDbd7Eij2uC8gf/fCY6RNfOQ=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 119ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:10:34 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 1622ms (Views: 1544.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-05 21:10:39 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (199.1ms)
+Completed 200 OK in 2914ms (Views: 2890.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 21:10:51 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+hMFhWvpiFJDQcyamMR2qf2ciTp4CU9vj/v1RCnQC6CAB988+bpeTzMLngQWpkGbnBle2wK6RZvLLLQMZpgdQ==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 281ms (ActiveRecord: 2.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+hMFhWvpiFJDQcyamMR2qf2ciTp4CU9vj/v1RCnQC6CAB988+bpeTzMLngQWpkGbnBle2wK6RZvLLLQMZpgdQ==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 2174ms (Views: 1898.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 21:10:58 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CciMuV6C+D7hrUG13hXOMgzyY6FSD/Gp3qg8etVHTx+oYNExOJeaDrxlkuj343eX4wvsu7ktpvDeYvJPbmiK8w==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 268ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CciMuV6C+D7hrUG13hXOMgzyY6FSD/Gp3qg8etVHTx+oYNExOJeaDrxlkuj343eX4wvsu7ktpvDeYvJPbmiK8w==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 2151ms (Views: 1908.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 21:11:07 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K4EP16eiRxfNmBkz6vmnJgDgt16iky1aljp0zHDd/IyKKVJfwbclJ5BQym7DDx6D7xk4REmxegOW8Lr5y/I5YA==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 342ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K4EP16eiRxfNmBkz6vmnJgDgt16iky1aljp0zHDd/IyKKVJfwbclJ5BQym7DDx6D7xk4REmxegOW8Lr5y/I5YA==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 2043ms (Views: 1785.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-05 21:11:13 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YCYnULO09UJ8KqbWjFHrfM0p0kOvEN4yCeD6l/qF9FXBjnrY1aGXciHidYulp1LZItBdWUQyiWsJKjSiQaoxuQ==", "user"=>{"email"=>"cramirez02@aurora.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cramirez02@aurora.edu' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-06 03:11:13', `last_sign_in_at` = '2017-12-05 16:50:32', `sign_in_count` = 4, `updated_at` = '2017-12-06 03:11:13' WHERE `users`.`id` = 2[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2089ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:11:15 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (28.5ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2296ms (Views: 2171.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-05 21:11:25 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `customers`[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` ORDER BY `customers`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `foods`[0m
+  [1m[36mFood Load (3.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` ORDER BY `foods`.`id` DESC LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `pets`[0m
+  [1m[36mPet Load (3.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY `pets`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `stores`[0m
+  [1m[36mStore Load (2.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` ORDER BY `stores`.`id` DESC LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `toys`[0m
+  [1m[36mToy Load (1.5ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` ORDER BY `toys`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (178.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (18.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (514.8ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (34.6ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (27.5ms)
+Completed 200 OK in 13162ms (Views: 7540.5ms | ActiveRecord: 96.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:11:53 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (63.1ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 3802ms (Views: 3646.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:12:52 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1515ms (Views: 1433.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:13:45 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2302ms (Views: 2169.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:14:07 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1497ms (Views: 1413.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:15:22 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2134ms (Views: 2012.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:16:24 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1524ms (Views: 1435.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:16:43 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2522ms (Views: 2380.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:20:35 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1760ms (Views: 1674.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:21:10 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2114ms (Views: 1979.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:26:22 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1882ms (Views: 1779.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:27:27 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2303ms (Views: 2181.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:27:46 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1545ms (Views: 1466.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:28:43 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1893ms (Views: 1797.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:29:25 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 2365ms (Views: 2231.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:40:38 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1698ms (Views: 1619.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:42:08 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1458ms (Views: 1378.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:42:51 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1446ms (Views: 1366.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 21:46:33 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1424ms (Views: 1340.9ms | ActiveRecord: 1.0ms)
+
+
