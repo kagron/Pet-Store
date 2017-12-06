@@ -7,7 +7,7 @@ end
 
 
 gem 'pry-rails', :group => :development
-
+gem 'rails_admin', '~> 1.2'
 gem 'rails-erd', require: false, group: :development
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

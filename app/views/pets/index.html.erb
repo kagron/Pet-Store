@@ -14,9 +14,14 @@
         <strong>Type of Animal:</strong> <%= pet.typeOfAnimal %><br>
         <strong>Description:</strong> <%= pet.description %><br />
         <strong>Date of Birth:</strong> <%= pet.dob %><br />
-        <%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %>
-        <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %>
-        <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
+
+          <%= link_to 'Show', pet, class: 'btn btn-primary', style: 'color: white' %>
+          <% if user_signed_in? %>
+          <% if current_user.admin %>
+          <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-warning', style: 'color: white' %>
+          <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   <% end %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PetStore</title>
+    <title>PetStore &amp; More</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -26,8 +26,11 @@
               <li><%= link_to "FOOD", foods_path %></li>
               <li><%= link_to "TOYS", toys_path %></li>
               <% if user_signed_in? %>
-                <li><%= link_to "EMPLOYEES", employees_path %></li>
-                <li><%= link_to "STORES", stores_path %></li>
+                <% if current_user.admin %>
+                  <li><%= link_to "EMPLOYEES", employees_path %></li>
+                  <li><%= link_to "STORES", stores_path %></li>
+                  <li><%= link_to "ADMIN", rails_admin_path %></li>
+                <% end %>
                 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
               <% else %>
                 <li><%= link_to "LOG IN", new_user_session_path %></li>

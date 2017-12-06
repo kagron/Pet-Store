@@ -28,8 +28,12 @@
         <td><%= employee.titles %></td>
         <td><%= employee.store_id %></td>
         <td><%= link_to 'Show', employee, class: 'btn btn-primary', style: 'color: white' %></td>
+        <% if user_signed_in? %>
+        <% if current_user.admin %>
         <td><%= link_to 'Edit', edit_employee_path(employee), class: 'btn btn-warning', style: 'color: white' %></td>
         <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %></td>
+        <% end %>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
