@@ -8423,3 +8423,392 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 972ms (Views: 897.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-05 18:40:05 -0600
+  [1m[35m (5.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (118251.9ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 120528ms (Views: 120357.9ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-05 18:43:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admins" for 127.0.0.1 at 2017-12-05 18:43:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/admins"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-05 18:44:12 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1324ms (Views: 1247.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-05 18:47:38 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `customers`[0m
+  [1m[36mCustomer Load (4.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` ORDER BY `customers`.`id` DESC LIMIT 1[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
+  [1m[36mEmployee Load (4.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `foods`[0m
+  [1m[36mFood Load (0.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` ORDER BY `foods`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `pets`[0m
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY `pets`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `stores`[0m
+  [1m[36mStore Load (0.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` ORDER BY `stores`.`id` DESC LIMIT 1[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `toys`[0m
+  [1m[36mToy Load (0.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` ORDER BY `toys`.`id` DESC LIMIT 1[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (148.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (12.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (224.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (24.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (12.0ms)
+Completed 200 OK in 6940ms (Views: 2995.4ms | ActiveRecord: 80.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 18:48:17 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1365ms (Views: 1292.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2017-12-05 18:48:22 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets`[0m
+  Rendered pets/index.html.erb within layouts/application (21.1ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1299ms (Views: 1216.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2017-12-05 18:48:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pets/new" for 127.0.0.1 at 2017-12-05 18:48:27 -0600
+Processing by PetsController#new as HTML
+  Rendering pets/new.html.erb within layouts/application
+  Rendered pets/_form.html.erb (3713.1ms)
+  Rendered pets/new.html.erb within layouts/application (7679.6ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 17541ms (Views: 16034.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2017-12-05 18:48:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/pets" for 127.0.0.1 at 2017-12-05 18:49:12 -0600
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"almwXhmgv9D/XfZzdEgsPq2cyWxgMPDM3sLSu54381XmJH4hePygyxfj2+vbdNRYQNbAX2UkXhjXc1M8eCD0nQ==", "pet"=>{"name"=>"Thor", "description"=>"Pitbull", "price"=>"1005", "dob(1i)"=>"2014", "dob(2i)"=>"12", "dob(3i)"=>"6", "typeOfAnimal"=>"Dog", "store_id"=>"1"}, "commit"=>"Create Pet"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStore Load (4.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (8.0ms)[0m  [1m[32mINSERT INTO `pets` (`name`, `description`, `price`, `dob`, `typeOfAnimal`, `created_at`, `updated_at`, `store_id`) VALUES ('Thor', 'Pitbull', 1005, '2014-12-06', 'Dog', '2017-12-06 00:49:12', '2017-12-06 00:49:12', 1)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pets/4
+Completed 302 Found in 124ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/pets/4" for 127.0.0.1 at 2017-12-05 18:49:12 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` WHERE `pets`.`id` = 4 LIMIT 1[0m
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1431ms (Views: 1345.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2017-12-05 18:49:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2017-12-05 18:49:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+Started GET "/admin" for 127.0.0.1 at 2017-12-05 18:49:29 -0600
+  
+Processing by RailsAdmin::MainController#dashboard as HTML
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1136.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `customers`[0m
+  [1m[36mCustomer Load (1124.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` ORDER BY `customers`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `foods`[0m
+  [1m[36mFood Load (4.0ms)[0m  [1m[34mSELECT  `foods`.* FROM `foods` ORDER BY `foods`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `pets`[0m
+  [1m[36mPet Load (4.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY `pets`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `stores`[0m
+  [1m[36mStore Load (0.0ms)[0m  [1m[34mSELECT  `stores`.* FROM `stores` ORDER BY `stores`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `toys`[0m
+  [1m[36mToy Load (0.0ms)[0m  [1m[34mSELECT  `toys`.* FROM `toys` ORDER BY `toys`.`id` DESC LIMIT 1[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (84.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (14.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (227.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (22.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (16.0ms)
+Completed 200 OK in 24676ms (Views: 20912.9ms | ActiveRecord: 2281.3ms)
+
+
+Started GET "/admin/pet?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-05 18:50:16 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pet"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY pets.id desc LIMIT 20 OFFSET 0[0m
+  [1m[36mStore Load (0.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (452.7ms)
+Completed 200 OK in 903ms (Views: 876.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/pet/export?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-05 18:50:21 -0600
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"pet"}
+Started GET "/admin/pet/export" for 127.0.0.1 at 2017-12-05 18:50:24 -0600
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"model_name"=>"pet"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax (304.8ms)
+Completed 200 OK in 2937ms (Views: 2910.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application (138.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (12.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (232.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (24.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (20.0ms)
+Completed 200 OK in 2674ms (Views: 2652.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/pet/export?all=true&model_name=pet" for 127.0.0.1 at 2017-12-05 18:50:47 -0600
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gic5e9GrAHNtrqnesuWqTDTn2yXrFiCfTqbbbaHhfv3lqqbB2DyxxvMUU16kCu/zlVi4Sk9p9jAmaICUHQ0MQ==", "send_data"=>"true", "all"=>"true", "schema"=>{"only"=>["id", "name", "description", "price", "dob", "typeOfAnimal", "created_at", "updated_at"], "methods"=>["avatar"], "include"=>{"store"=>{"only"=>["id", "created_at", "updated_at", "street_line_1", "street_line_2", "city", "state", "zip_code"]}}}, "csv_options"=>{"encoding_to"=>"", "generator"=>{"col_sep"=>","}}, "return_to"=>"http://localhost:3000/admin/pet/export", "csv"=>"", "model_name"=>"pet"}
+  [1m[36mPet Load (4.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets` ORDER BY pets.id desc[0m
+  [1m[36mStore Load (0.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY pets.id desc LIMIT 1[0m
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+Scoped order is ignored, it's forced to be batch order.
+  [1m[36mPet Load (4.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY `pets`.`id` ASC LIMIT 1000[0m
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (12.0ms)
+Completed 200 OK in 100ms (Views: 9.4ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/admin/pet/export?all=true&model_name=pet" for 127.0.0.1 at 2017-12-05 18:57:39 -0600
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gic5e9GrAHNtrqnesuWqTDTn2yXrFiCfTqbbbaHhfv3lqqbB2DyxxvMUU16kCu/zlVi4Sk9p9jAmaICUHQ0MQ==", "send_data"=>"true", "all"=>"true", "schema"=>{"only"=>["id", "name", "description", "price", "dob", "typeOfAnimal", "created_at", "updated_at"], "methods"=>["avatar"], "include"=>{"store"=>{"only"=>["id", "created_at", "updated_at", "street_line_1", "street_line_2", "city", "state", "zip_code"]}}}, "csv_options"=>{"encoding_to"=>"", "generator"=>{"col_sep"=>","}}, "return_to"=>"http://localhost:3000/admin/pet/export", "csv"=>"", "model_name"=>"pet"}
+  [1m[36mPet Load (4.0ms)[0m  [1m[34mSELECT `pets`.* FROM `pets` ORDER BY pets.id desc[0m
+  [1m[36mStore Load (4.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY pets.id desc LIMIT 1[0m
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+Scoped order is ignored, it's forced to be batch order.
+  [1m[36mPet Load (0.0ms)[0m  [1m[34mSELECT  `pets`.* FROM `pets` ORDER BY `pets`.`id` ASC LIMIT 1000[0m
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (4.0ms)
+Completed 200 OK in 100ms (Views: 3.4ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 19:12:34 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1349ms (Views: 1270.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2017-12-05 19:12:42 -0600
+Processing by ReportsController#index as HTML
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1361ms (Views: 1279.9ms | ActiveRecord: 4.0ms)
+
+
