@@ -11,9 +11,14 @@
         <h1><%= food.name %> </h1> <br/>
         <h2>$<%= food.price %></h2> <br />
         <%= food.foodType %><br>
+
         <%= link_to 'Show', food, class: 'btn btn-primary', style: 'color: white' %>
+        <% if user_signed_in? %>
+        <% if current_user.admin %>
         <%= link_to 'Edit', edit_food_path(food), class: 'btn btn-warning', style: 'color: white' %>
         <%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
+        <% end %>
+      <% end %>
       </div>
     </div>
   <% end %>

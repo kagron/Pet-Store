@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  before_action :check_user
 
   # GET /customers
   # GET /customers.json
@@ -65,6 +66,12 @@ class CustomersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
       @customer = Customer.find(params[:id])
+    end
+
+    def check_user
+      if !current_user.admin
+        redirect_to root_path, notice: 'You must be an admin'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

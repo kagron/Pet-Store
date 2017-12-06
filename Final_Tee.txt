@@ -1,0 +1,318 @@
+mysql> desc pets;
+ERROR 1046 (3D000): No database selected
+mysql> use PetStore_development;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> desc pets;
++---------------------+---------------+------+-----+---------+----------------+
+| Field               | Type          | Null | Key | Default | Extra          |
++---------------------+---------------+------+-----+---------+----------------+
+| id                  | bigint(20)    | NO   | PRI | NULL    | auto_increment |
+| name                | varchar(255)  | YES  |     | NULL    |                |
+| description         | varchar(255)  | YES  |     | NULL    |                |
+| price               | decimal(10,0) | YES  |     | NULL    |                |
+| dob                 | date          | YES  |     | NULL    |                |
+| typeOfAnimal        | varchar(255)  | YES  |     | NULL    |                |
+| created_at          | datetime      | NO   |     | NULL    |                |
+| updated_at          | datetime      | NO   |     | NULL    |                |
+| store_id            | bigint(20)    | YES  | MUL | NULL    |                |
+| avatar_file_name    | varchar(255)  | YES  |     | NULL    |                |
+| avatar_content_type | varchar(255)  | YES  |     | NULL    |                |
+| avatar_file_size    | int(11)       | YES  |     | NULL    |                |
+| avatar_updated_at   | datetime      | YES  |     | NULL    |                |
++---------------------+---------------+------+-----+---------+----------------+
+13 rows in set (0.00 sec)
+
+mysql> select * from pets;
++----+--------+---------------------+-------+------------+--------------+---------------------+---------------------+----------+------------------------------+---------------------+------------------+---------------------+
+| id | name   | description         | price | dob        | typeOfAnimal | created_at          | updated_at          | store_id | avatar_file_name             | avatar_content_type | avatar_file_size | avatar_updated_at   |
++----+--------+---------------------+-------+------------+--------------+---------------------+---------------------+----------+------------------------------+---------------------+------------------+---------------------+
+|  1 | jeffry | a small baby poodle |  1111 | 2017-10-23 | dog          | 2017-10-24 18:26:48 | 2017-11-30 01:08:43 |        1 | pupper.jpg                   | image/jpeg          |            44411 | 2017-11-14 20:25:04 |
+|  2 | Andrei | fugly               |     0 | 2017-11-14 | skunk        | 2017-11-14 20:29:51 | 2017-11-30 00:16:05 |        1 | impossibly-cute-puppy-21.jpg | image/jpeg          |            33543 | 2017-11-14 20:29:50 |
++----+--------+---------------------+-------+------------+--------------+---------------------+---------------------+----------+------------------------------+---------------------+------------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc stores;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| created_at    | datetime     | NO   |     | NULL    |                |
+| updated_at    | datetime     | NO   |     | NULL    |                |
+| street_line_1 | varchar(255) | YES  |     | NULL    |                |
+| street_line_2 | varchar(255) | YES  |     | NULL    |                |
+| city          | varchar(255) | YES  |     | NULL    |                |
+| state         | varchar(255) | YES  |     | NULL    |                |
+| zip_code      | int(11)      | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> desc employees;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| emp_no     | int(11)      | YES  |     | NULL    |                |
+| birth_date | date         | YES  |     | NULL    |                |
+| first_name | varchar(255) | YES  |     | NULL    |                |
+| last_name  | varchar(255) | YES  |     | NULL    |                |
+| gender     | varchar(255) | YES  |     | NULL    |                |
+| hire_date  | date         | YES  |     | NULL    |                |
+| titles     | varchar(255) | YES  |     | NULL    |                |
+| created_at | datetime     | NO   |     | NULL    |                |
+| updated_at | datetime     | NO   |     | NULL    |                |
+| store_id   | bigint(20)   | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.00 sec)
+
+mysql> desc customers;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| birth_date | date         | YES  |     | NULL    |                |
+| cust_num   | int(11)      | YES  |     | NULL    |                |
+| first_name | varchar(255) | YES  |     | NULL    |                |
+| last_name  | varchar(255) | YES  |     | NULL    |                |
+| gender     | varchar(255) | YES  |     | NULL    |                |
+| phone_num  | varchar(255) | YES  |     | NULL    |                |
+| store_id   | bigint(20)   | YES  | MUL | NULL    |                |
+| created_at | datetime     | NO   |     | NULL    |                |
+| updated_at | datetime     | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> insert into stores (street_line_1, city, state, zip_code) values ("5 Waffle Ave", "Chicago", "Il","43252");
+ERROR 1364 (HY000): Field 'created_at' doesn't have a default value
+mysql> insert into stores (created_at, updated_at, street_line_1, city, state, zip_code) values (NOW(), NOW(),"5 Waffle Ave", "Chicago", "Il","43252");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into stores (created_at, updated_at, street_line_1, city, state, zip_code) values (NOW(), NOW(),"6 Waffle Ave", "Chicago", "Il","43252");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into stores (created_at, updated_at, street_line_1, city, state, zip_code) values (NOW(), NOW(),"7 Waffle Ave", "Chicago", "Il","43252");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into stores (created_at, updated_at, street_line_1, city, state, zip_code) values (NOW(), NOW(),"8 Waffle Ave", "Chicago", "Il","43252");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into stores (created_at, updated_at, street_line_1, city, state, zip_code) values (NOW(), NOW(),"9 Waffle Ave", "Chicago", "Il","43252");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into stores (created_at, updated_at, street_line_1, city, state, zip_code) values (NOW(), NOW(),"10 Waffle Ave", "Chicago", "Il","43252");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> desc pets;
++---------------------+---------------+------+-----+---------+----------------+
+| Field               | Type          | Null | Key | Default | Extra          |
++---------------------+---------------+------+-----+---------+----------------+
+| id                  | bigint(20)    | NO   | PRI | NULL    | auto_increment |
+| name                | varchar(255)  | YES  |     | NULL    |                |
+| description         | varchar(255)  | YES  |     | NULL    |                |
+| price               | decimal(10,0) | YES  |     | NULL    |                |
+| dob                 | date          | YES  |     | NULL    |                |
+| typeOfAnimal        | varchar(255)  | YES  |     | NULL    |                |
+| created_at          | datetime      | NO   |     | NULL    |                |
+| updated_at          | datetime      | NO   |     | NULL    |                |
+| store_id            | bigint(20)    | YES  | MUL | NULL    |                |
+| avatar_file_name    | varchar(255)  | YES  |     | NULL    |                |
+| avatar_content_type | varchar(255)  | YES  |     | NULL    |                |
+| avatar_file_size    | int(11)       | YES  |     | NULL    |                |
+| avatar_updated_at   | datetime      | YES  |     | NULL    |                |
++---------------------+---------------+------+-----+---------+----------------+
+13 rows in set (0.01 sec)
+
+mysql> insert into pets (name, description, price, dob, typeOfAnimal, created_at, updated_at, store_id) values ("Scooby", "Good boy",200.00, "2017-04-01","Dog", NOW(), NOW(), 1);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into pets (name, description, price, dob, typeOfAnimal, created_at, updated_at, store_id) values ("Scooby", "Good boy",200.00, "2017-04-01","Dog", NOW(), NOW(), 2);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into pets (name, description, price, dob, typeOfAnimal, created_at, updated_at, store_id) values ("Scooby", "Good boy",200.00, "2017-04-01","Dog", NOW(), NOW(), 3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> insert into pets (name, description, price, dob, typeOfAnimal, created_at, updated_at, store_id) values ("Scooby", "Good boy",200.00, "2017-04-01","Dog", NOW(), NOW(), 3);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into pets (name, description, price, dob, typeOfAnimal, created_at, updated_at, store_id) values ("Scooby", "Good boy",200.00, "2017-04-01","Dog", NOW(), NOW(), 4);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into pets (name, description, price, dob, typeOfAnimal, created_at, updated_at, store_id) values ("Scooby", "Good boy",200.00, "2017-04-01","Dog", NOW(), NOW(), 5);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> desc employees;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| emp_no     | int(11)      | YES  |     | NULL    |                |
+| birth_date | date         | YES  |     | NULL    |                |
+| first_name | varchar(255) | YES  |     | NULL    |                |
+| last_name  | varchar(255) | YES  |     | NULL    |                |
+| gender     | varchar(255) | YES  |     | NULL    |                |
+| hire_date  | date         | YES  |     | NULL    |                |
+| titles     | varchar(255) | YES  |     | NULL    |                |
+| created_at | datetime     | NO   |     | NULL    |                |
+| updated_at | datetime     | NO   |     | NULL    |                |
+| store_id   | bigint(20)   | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.01 sec)
+
+mysql> insert into employees (emp_no, birth_date, first_name, last_name, gender, hire_date, titles, created_at, updated_at, store_id) values (12341, NOW(), "Kyle","Grondin", "M", NOW(), "CEO", NOW(), NOW());
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into employees (emp_no, birth_date, first_name, last_name, gender, hire_date, titles, created_at, updated_at, store_id) values (12341, NOW(), "Kyle","Grondin", "M", NOW(), "CEO", NOW(), NOW(), 1);
+Query OK, 1 row affected, 2 warnings (0.05 sec)
+
+mysql> insert into employees (emp_no, birth_date, first_name, last_name, gender, hire_date, titles, created_at, updated_at, store_id) values (12341, NOW(), "Kyle","Grondin", "M", NOW(), "CEO", NOW(), NOW(), 2);
+Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+mysql> insert into employees (emp_no, birth_date, first_name, last_name, gender, hire_date, titles, created_at, updated_at, store_id) values (12341, NOW(), "Kyle","Grondin", "M", NOW(), "CEO", NOW(), NOW(), 3);
+Query OK, 1 row affected, 2 warnings (0.05 sec)
+
+mysql> insert into employees (emp_no, birth_date, first_name, last_name, gender, hire_date, titles, created_at, updated_at, store_id) values (12341, NOW(), "Kyle","Grondin", "M", NOW(), "CEO", NOW(), NOW(), 4);
+Query OK, 1 row affected, 2 warnings (0.05 sec)
+
+mysql> insert into employees (emp_no, birth_date, first_name, last_name, gender, hire_date, titles, created_at, updated_at, store_id) values (12341, NOW(), "Kyle","Grondin", "M", NOW(), "CEO", NOW(), NOW(), 5);
+Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+mysql> desc customers;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| birth_date | date         | YES  |     | NULL    |                |
+| cust_num   | int(11)      | YES  |     | NULL    |                |
+| first_name | varchar(255) | YES  |     | NULL    |                |
+| last_name  | varchar(255) | YES  |     | NULL    |                |
+| gender     | varchar(255) | YES  |     | NULL    |                |
+| phone_num  | varchar(255) | YES  |     | NULL    |                |
+| store_id   | bigint(20)   | YES  | MUL | NULL    |                |
+| created_at | datetime     | NO   |     | NULL    |                |
+| updated_at | datetime     | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> Insert into customers (birth_date, cust_num, first_name, last_name, gender, phone_num, store_id, created_at, updated_at) values (NOW(), 1234, "Kyle", "Grondin", "M", "123-432-5631",1,NOW(), NOW());
+Query OK, 1 row affected, 1 warning (0.04 sec)
+
+mysql> Insert into customers (birth_date, cust_num, first_name, last_name, gender, phone_num, store_id, created_at, updated_at) values (NOW(), 1234, "Kyle", "Grondin", "M", "123-432-5631",2,NOW(), NOW());
+Query OK, 1 row affected, 1 warning (0.04 sec)
+
+mysql> Insert into customers (birth_date, cust_num, first_name, last_name, gender, phone_num, store_id, created_at, updated_at) values (NOW(), 1234, "Kyle", "Grondin", "M", "123-432-5631",3,NOW(), NOW());
+Query OK, 1 row affected, 1 warning (0.03 sec)
+
+mysql> Insert into customers (birth_date, cust_num, first_name, last_name, gender, phone_num, store_id, created_at, updated_at) values (NOW(), 1234, "Kyle", "Grondin", "M", "123-432-5631",4,NOW(), NOW());
+Query OK, 1 row affected, 1 warning (0.04 sec)
+
+mysql> Insert into customers (birth_date, cust_num, first_name, last_name, gender, phone_num, store_id, created_at, updated_at) values (NOW(), 1234, "Kyle", "Grondin", "M", "123-432-5631",5,NOW(), NOW());
+Query OK, 1 row affected, 1 warning (0.04 sec)
+
+mysql> desc foods;
++---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| id                  | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| name                | varchar(255) | YES  |     | NULL    |                |
+| data                | date         | YES  |     | NULL    |                |
+| price               | float        | YES  |     | NULL    |                |
+| foodType            | varchar(255) | YES  |     | NULL    |                |
+| quantity            | int(11)      | YES  |     | NULL    |                |
+| created_at          | datetime     | NO   |     | NULL    |                |
+| updated_at          | datetime     | NO   |     | NULL    |                |
+| store_id            | bigint(20)   | YES  | MUL | NULL    |                |
+| expirationDate      | date         | YES  |     | NULL    |                |
+| avatar_file_name    | varchar(255) | YES  |     | NULL    |                |
+| avatar_content_type | varchar(255) | YES  |     | NULL    |                |
+| avatar_file_size    | int(11)      | YES  |     | NULL    |                |
+| avatar_updated_at   | datetime     | YES  |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+14 rows in set (0.00 sec)
+
+mysql> insert into foods (name, data, price, foodType, quantity, created_at, updated_at, store_id, expirationDate) values ("Dog Treats",NOW(), 123.3, "Treats", 23, NOW(), NOW(), 1, NOW());
+Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+mysql> insert into foods (name, data, price, foodType, quantity, created_at, updated_at, store_id, expirationDate) values ("Dog Treats",NOW(), 123.3, "Treats", 23, NOW(), NOW(), 2, NOW());
+Query OK, 1 row affected, 2 warnings (0.05 sec)
+
+mysql> insert into foods (name, data, price, foodType, quantity, created_at, updated_at, store_id, expirationDate) values ("Dog Treats",NOW(), 123.3, "Treats", 23, NOW(), NOW(), 3, NOW());
+Query OK, 1 row affected, 2 warnings (0.03 sec)
+
+mysql> insert into foods (name, data, price, foodType, quantity, created_at, updated_at, store_id, expirationDate) values ("Dog Treats",NOW(), 123.3, "Treats", 23, NOW(), NOW(), 4, NOW());
+Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+mysql> insert into foods (name, data, price, foodType, quantity, created_at, updated_at, store_id, expirationDate) values ("Dog Treats",NOW(), 123.3, "Treats", 23, NOW(), NOW(), 5, NOW());
+Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+mysql> desc toys;
++---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| id                  | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| brand               | varchar(255) | YES  |     | NULL    |                |
+| quantity            | int(11)      | YES  |     | NULL    |                |
+| description         | text         | YES  |     | NULL    |                |
+| created_at          | datetime     | NO   |     | NULL    |                |
+| updated_at          | datetime     | NO   |     | NULL    |                |
+| store_id            | bigint(20)   | YES  | MUL | NULL    |                |
+| toyType             | varchar(255) | YES  |     | NULL    |                |
+| avatar_file_name    | varchar(255) | YES  |     | NULL    |                |
+| avatar_content_type | varchar(255) | YES  |     | NULL    |                |
+| avatar_file_size    | int(11)      | YES  |     | NULL    |                |
+| avatar_updated_at   | datetime     | YES  |     | NULL    |                |
+| price               | double       | YES  |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+13 rows in set (0.01 sec)
+
+mysql> insert into toys (brand, quantity, description, created_at, updated_at, store_id, toyType, price) values ("Kong",25, "chew toy", NOW(), NOW(), 1, "chew toy", 20.00);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into toys (brand, quantity, description, created_at, updated_at, store_id, toyType, price) values ("Kong",25, "chew toy", NOW(), NOW(), 2, "chew toy", 20.00);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into toys (brand, quantity, description, created_at, updated_at, store_id, toyType, price) values ("Kong",25, "chew toy", NOW(), NOW(), 3, "chew toy", 20.00);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into toys (brand, quantity, description, created_at, updated_at, store_id, toyType, price) values ("Kong",25, "chew toy", NOW(), NOW(), 4, "chew toy", 20.00);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into toys (brand, quantity, description, created_at, updated_at, store_id, toyType, price) values ("Kong",25, "chew toy", NOW(), NOW(), 5, "chew toy", 20.00);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> show tables;
++--------------------------------+
+| Tables_in_PetStore_development |
++--------------------------------+
+| ar_internal_metadata           |
+| customers                      |
+| employees                      |
+| foods                          |
+| pets                           |
+| schema_migrations              |
+| stores                         |
+| toys                           |
+| users                          |
++--------------------------------+
+9 rows in set (0.00 sec)
+
+mysql> desc users;
++------------------------+--------------+------+-----+---------+----------------+
+| Field                  | Type         | Null | Key | Default | Extra          |
++------------------------+--------------+------+-----+---------+----------------+
+| id                     | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| email                  | varchar(255) | NO   | UNI |         |                |
+| encrypted_password     | varchar(255) | NO   |     |         |                |
+| reset_password_token   | varchar(255) | YES  | UNI | NULL    |                |
+| reset_password_sent_at | datetime     | YES  |     | NULL    |                |
+| remember_created_at    | datetime     | YES  |     | NULL    |                |
+| sign_in_count          | int(11)      | NO   |     | 0       |                |
+| current_sign_in_at     | datetime     | YES  |     | NULL    |                |
+| last_sign_in_at        | datetime     | YES  |     | NULL    |                |
+| current_sign_in_ip     | varchar(255) | YES  |     | NULL    |                |
+| last_sign_in_ip        | varchar(255) | YES  |     | NULL    |                |
+| created_at             | datetime     | NO   |     | NULL    |                |
+| updated_at             | datetime     | NO   |     | NULL    |                |
++------------------------+--------------+------+-----+---------+----------------+
+13 rows in set (0.00 sec)
+
+mysql> \q

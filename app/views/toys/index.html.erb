@@ -13,9 +13,14 @@
         <h1><%= toy.brand %> <%= toy.toyType %></h1> <br/>
         <h2>$<%= toy.price %></h2> <br />
         <%= toy.description %><br>
+
         <%= link_to 'Show', toy, class: 'btn btn-primary', style: 'color: white' %>
+        <% if user_signed_in? %>
+        <% if current_user.admin %>
         <%= link_to 'Edit', edit_toy_path(toy), class: 'btn btn-warning', style: 'color: white' %>
         <%= link_to 'Destroy', toy, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: white' %>
+        <% end %>
+      <% end %>
       </div>
     </div>
   <% end %>

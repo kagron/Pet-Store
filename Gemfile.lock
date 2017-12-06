@@ -280,7 +280,11 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails-erd
+<<<<<<< HEAD
   
+=======
+  rails_admin (~> 1.2)
+>>>>>>> fa25c1789e96426052be8204e05b253006000032
   sass-rails (~> 5.0)
   selenium-webdriver
   turbolinks (~> 5)

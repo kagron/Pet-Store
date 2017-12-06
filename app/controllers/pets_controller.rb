@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, except: [:index, :show]
 
   # GET /pets
   # GET /pets.json
@@ -65,6 +66,11 @@ class PetsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_pet
       @pet = Pet.find(params[:id])
+    end
+    def check_user
+      if !current_user.admin
+        redirect_to root_path, notice: 'You must be an admin'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
