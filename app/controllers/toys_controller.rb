@@ -1,5 +1,6 @@
 class ToysController < ApplicationController
   before_action :set_toy, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, except: [:index, :show]
 
   # GET /toys
   # GET /toys.json
@@ -67,6 +68,11 @@ class ToysController < ApplicationController
       @toy = Toy.find(params[:id])
     end
 
+    def check_user
+      if !current_user.admin
+        redirect_to root_path, notice: 'You must be an admin'
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def toy_params
       params.require(:toy).permit(:brand, :toyType, :quantity, :description, :store_id, :avatar, :price)
